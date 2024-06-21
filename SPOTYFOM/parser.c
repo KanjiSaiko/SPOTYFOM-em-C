@@ -1,7 +1,7 @@
 #include "bibliotecas.h"
 
 
-DescLE *parser(){
+DescLE *parser(int *tamLinhas){
     DescLE *descritorLista = inicializaLE();
     Musica *musica;
     NodoLP *nodo;
@@ -32,7 +32,7 @@ DescLE *parser(){
         if (fgets(linhaS, sizeof(linhaS), arq) != NULL) {
             linhaN = atoi(linhaS); //converte para inteiro -> 5000 armazenado na variavel linhaN
         }
-
+        *tamLinhas = linhaN;
         for(int i = 0; i < linhaN; i++){
             if (fgets(linhaS, sizeof(linhaS), arq) == NULL)
                     break;

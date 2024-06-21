@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 
 typedef struct musica Musica;
@@ -9,7 +10,7 @@ typedef struct dscLE DescLE;
 typedef struct nodo_fila NodoFila;
 typedef struct dscFila DescFila;
 typedef struct desc_Pilha DescPilha;
-
+typedef struct Playlist Playlist;
 
 struct musica{
     char titulo[256];
@@ -50,11 +51,24 @@ struct desc_Pilha{
     int tamanho;
 };
 
+struct Playlist{
+    DescFila *PlaylistFila;
+    DescPilha *PlaylistPilha;
+};
+
 
 DescLE *inicializaLE();
 DescPilha *inicializaPilha();
 DescFila *inicializaFila();
-DescLE *parser();
+Playlist *inicializaPlaylist();
+DescLE *parser(int *tamLinhas);
 NodoLP *criaNodo();
 DescLE *addMusica(DescLE *descritorLista, NodoLP *nodo);
 void imprime(DescLE *descritor);
+Musica *Busca(DescLE *descritor);
+NodoFila *inicializaNodoF(Musica *musica);
+DescFila *addNodoFila(DescFila *descritor, NodoFila *nodo);
+NodoLP *inicializaNodoP(Musica *musica);
+DescPilha *addNodoPilha(DescPilha *descritor, NodoLP *nodo);
+DescFila *playlistRandom(DescLE *descritor, int tamlinhas);
+DescPilha *playlistPessoal(DescLE *descritor);
