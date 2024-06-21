@@ -4,9 +4,7 @@
 int main(void){
     DescLE *descritorLE = NULL;
     Playlist *playlist = NULL;
-    NodoLP *nodoLista = NULL, *nodoPilha = NULL;
-    NodoFila *nodoFila = NULL;
-    char escolha, escolhaplaylist;
+    char escolha, escolhaplaylist, escolhaExec;
     int escolhaaux = 1, tamlinhas;
     Musica *musicaBuscada = NULL;
     //primeiro le arquivo:
@@ -21,7 +19,14 @@ int main(void){
         switch(escolha){
             case 'e':
             case 'E':
-
+                printf("Execute a playlist: [A]leatorio || [P]essoal: ");
+                scanf(" %c", &escolhaExec);
+                if(escolhaplaylist == 'A' || escolhaplaylist == 'a'){
+                    descritorLE = ExecucaoRandom(playlist, descritorLE);
+                }
+                else if(escolhaplaylist == 'P' || escolhaplaylist == 'p'){
+                    descritorLE = ExecucaoPessoal(playlist, descritorLE);
+                }
                 break;
             
             case 'p':

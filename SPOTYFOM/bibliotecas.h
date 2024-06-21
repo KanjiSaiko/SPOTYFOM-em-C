@@ -72,3 +72,6 @@ NodoLP *inicializaNodoP(Musica *musica);
 DescPilha *addNodoPilha(DescPilha *descritor, NodoLP *nodo);
 DescFila *playlistRandom(DescLE *descritor, int tamlinhas);
 DescPilha *playlistPessoal(DescLE *descritor);
+DescLE *ExecucaoRandom(Playlist *playlist, DescLE *descritor);
+DescLE *ExecucaoPessoal(Playlist *playlist, DescLE *descritor);
+void Relatorio(Playlist *playlist, DescLE *descritor);
