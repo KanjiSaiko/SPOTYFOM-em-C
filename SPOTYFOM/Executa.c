@@ -8,8 +8,8 @@ DescLE *ExecucaoRandom(Playlist *playlist, DescLE *descritor){ //na playlist ran
     DescFila *ant;
     do{
         printf("Digite o nome da playlist a ser executada: ");
-        fgets(nome, 100, stdin);
-        nome[strlen(nome) - 1] = '\0';
+        setbuf(stdin, NULL);
+        scanf("%s", nome);
         while(FilaCorreta != NULL){
             ant = FilaCorreta;
             if(strcmp(nome, FilaCorreta->nome) == 0){
@@ -38,6 +38,7 @@ DescLE *ExecucaoRandom(Playlist *playlist, DescLE *descritor){ //na playlist ran
         printf("Letra: %s\n", aux->info->letra);
         printf("Artista: %s\n", aux->info->artista);
         printf("==========================\n");
+        aux2 = descritor->primeiro;
         while(aux2 != NULL){
             if(aux2->info->codigo == aux->info->codigo){
                 aux2->info->execucoes++;
@@ -57,8 +58,6 @@ DescLE *ExecucaoRandom(Playlist *playlist, DescLE *descritor){ //na playlist ran
         FilaCorreta->tamanho--;  //diminui tamanho da playlist randomica
     }
     ant->prox = FilaCorreta->prox;
-    free(FilaCorreta);
-    FilaCorreta = NULL;
     return descritor;
 }
 

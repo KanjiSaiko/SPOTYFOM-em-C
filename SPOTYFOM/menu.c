@@ -20,6 +20,7 @@ int main(void){
         switch(escolha){
             case 'e':
             case 'E':
+                //ADICIONAR A QUESTAO DE QUANDO EXECUTAR E EXCLUIR A PLAYLIST, NAO IMPRIMI-LO NO RELATORIO.
                 printf("Execute a playlist: [A]leatorio || [P]essoal: ");
                 scanf(" %c", &escolhaExec);
                 if(escolhaplaylist == 'A' || escolhaplaylist == 'a'){

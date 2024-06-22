@@ -24,11 +24,9 @@ Playlist *playlistRandom(DescLE *descritor, int tamlinhas, Playlist *playlist){
         aux = descritor->primeiro;
         tamanhoaux++;
     }
-    printf("Criacao da playlist randomica concluida!\n");
     printf("De um nome a playlist: ");
     setbuf(stdin, NULL);
-    fgets(playlistFila->nome, 100, stdin);
-    playlistFila->nome[strlen(playlistFila->nome) - 1] = '\0';
+    scanf("%s", playlistFila->nome);
     //adiciona a nova fila na playlist:
     if(playlist->primeiroFila == NULL){
         playlist->primeiroFila = playlistFila;
@@ -40,6 +38,7 @@ Playlist *playlistRandom(DescLE *descritor, int tamlinhas, Playlist *playlist){
         }
         auxplaylist->prox = playlistFila;
     }
+    printf("Criacao da playlist randomica concluida!\n");
     return playlist;
 }
 
@@ -68,8 +67,7 @@ Playlist *playlistPessoal(DescLE *descritor, Playlist *playlist){
 
     printf("De um nome a playlist: ");
     setbuf(stdin, NULL);
-    fgets(playlistPilha->nome, 100, stdin);
-    playlistPilha->nome[strlen(playlistPilha->nome) - 1] = '\0';
+    scanf("%s", playlistPilha->nome);
     //adiciona a nova pilha na playlist:
     if(playlist->primeiroPilha == NULL){
         playlist->primeiroPilha = playlistPilha;
@@ -81,6 +79,7 @@ Playlist *playlistPessoal(DescLE *descritor, Playlist *playlist){
         }
         auxplaylist->prox = playlistPilha;
     }
+    setbuf(stdin, NULL);
     printf("Criacao da playlist pessoal concluida!\n");
     return playlist;
 }

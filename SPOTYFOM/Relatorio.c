@@ -2,14 +2,15 @@
 
 
 void Relatorio(Playlist *playlist, DescLE *descritor){
-    int escolha, loop = 1;
+    int loop = 1;
+    char escolha;
     do{
         printf("Digite: [1] Relatorio do Acervo || [2] Relatorio das Playlists || Qualquer outro numero para voltar\n");
-        scanf("%d", &escolha);
+        scanf(" %c", &escolha);
 
-        if(escolha == 1){ //RELATORIO DO ACERVO
+        if(escolha == '1'){ //RELATORIO DO ACERVO
             NodoLP *aux = descritor->primeiro;
-            FILE *arqA = fopen("Relatorio_Acervo.txt", "w");
+            FILE *arqA = fopen("./musicas/Relatorio_Acervo.txt", "w");
             
             if(arqA){
                 fprintf(arqA, "%d\n", descritor->tamanho);
@@ -30,9 +31,9 @@ void Relatorio(Playlist *playlist, DescLE *descritor){
             }
         }
 
-        else if(escolha == 2){
-            FILE *arqP = fopen("Relatorio_Pessoal.txt", "w");
-            FILE *arqR = fopen("Relatorio_Random.txt", "w");
+        else if(escolha == '2'){
+            FILE *arqP = fopen("./musicas/Relatorio_Pessoal.txt", "w");
+            FILE *arqR = fopen("./musicas/Relatorio_Random.txt", "w");
             DescPilha *playlistsPilhas = playlist->primeiroPilha;
             NodoLP *auxPilha;
             DescFila *playlistsFila = playlist->primeiroFila;
@@ -77,8 +78,8 @@ void Relatorio(Playlist *playlist, DescLE *descritor){
                         fprintf(arqR, "%d\n", auxFila->info->execucoes);
                         auxFila = auxFila->prox;
                     }
-                    fprintf(arqP, "\n\n");
-                    playlistsPilhas = playlistsPilhas->prox;
+                    fprintf(arqR, "\n\n");
+                    playlistsFila = playlistsFila->prox;
                 }
                 
                 fclose(arqR);
@@ -92,7 +93,6 @@ void Relatorio(Playlist *playlist, DescLE *descritor){
 
         else {
             loop = 0;
-            printf("Saindo do programa\n");
         }
 
         
