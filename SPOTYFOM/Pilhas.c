@@ -27,6 +27,7 @@ DescPilha *inicializaPilha(){
     DescPilha *descPilha = malloc(sizeof(DescPilha));
     descPilha->Fundo = NULL;
     descPilha->Topo = NULL;
+    descPilha->prox = NULL;
     descPilha->tamanho = 0;
     return descPilha;
 }

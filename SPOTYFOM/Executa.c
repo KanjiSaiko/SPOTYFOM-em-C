@@ -2,11 +2,34 @@
 
 
 DescLE *ExecucaoRandom(Playlist *playlist, DescLE *descritor){ //na playlist randomica
-    if(playlist->PlaylistFila->head == NULL){
-        printf("Playlist randomica vazia.\n");
+    char nome[100];
+    int loop = 1;
+    DescFila *FilaCorreta = playlist->primeiroFila;
+    DescFila *ant;
+    do{
+        printf("Digite o nome da playlist a ser executada: ");
+        fgets(nome, 100, stdin);
+        nome[strlen(nome) - 1] = '\0';
+        while(FilaCorreta != NULL){
+            ant = FilaCorreta;
+            if(strcmp(nome, FilaCorreta->nome) == 0){
+                loop = 0;
+                break;
+            }
+            FilaCorreta = FilaCorreta->prox;
+        }
+
+        if(FilaCorreta == NULL)
+            printf("Playlist nao encontrada. Tente novamente.\n");
+        
+    }while(loop == 1);
+
+    if(FilaCorreta->head == NULL){
+        printf("Playlist %s vazia.\n", nome);
         return NULL;
     }
-    NodoFila *aux = playlist->PlaylistFila->head;
+
+    NodoFila *aux = FilaCorreta->head;
     NodoLP *aux2 = descritor->primeiro;
     
     while(aux != NULL){ // executando em fila as musicas:
@@ -23,27 +46,54 @@ DescLE *ExecucaoRandom(Playlist *playlist, DescLE *descritor){ //na playlist ran
             aux2 = aux2->prox;
         }
 
-        playlist->PlaylistFila->head = aux->prox; //retira musica da playlist random
-        if(playlist->PlaylistFila->head != NULL){
-            playlist->PlaylistFila->head->ant = NULL;
+        FilaCorreta->head = aux->prox; //retira musica da playlist random
+        if(FilaCorreta->head != NULL){
+            FilaCorreta->head->ant = NULL;
         }
         else {
-            playlist->PlaylistFila->tail = NULL;
+            FilaCorreta->tail = NULL;
         }
         aux = aux->prox; //busca proxima musica;
-        playlist->PlaylistFila->tamanho--;  //diminui tamanho da playlist randomica
+        FilaCorreta->tamanho--;  //diminui tamanho da playlist randomica
     }
+    ant->prox = FilaCorreta->prox;
+    free(FilaCorreta);
+    FilaCorreta = NULL;
     return descritor;
 }
 
 
 
 DescLE *ExecucaoPessoal(Playlist *playlist, DescLE *descritor){
-    if(playlist->PlaylistPilha->Topo == NULL){
-        printf("Playlist Pessoal vazia.\n");
+    char nome[100];
+    int loop = 1;
+    DescPilha *PilhaCorreta = playlist->primeiroPilha;
+    DescPilha *ant;
+    do{
+        printf("Digite o nome da playlist a ser executada: ");
+        fgets(nome, 100, stdin);
+        nome[strlen(nome) - 1] = '\0';
+        while(PilhaCorreta != NULL){
+            ant = PilhaCorreta;
+            if(strcmp(nome, PilhaCorreta->nome) == 0){
+                loop = 0;
+                break;
+            }
+            PilhaCorreta = PilhaCorreta->prox;
+        }
+        
+        if(PilhaCorreta == NULL)
+            printf("Playlist nao encontrada. Tente novamente.\n");
+        
+    }while(loop == 1);
+
+
+
+    if(PilhaCorreta->Topo == NULL){
+        printf("Playlist Pessoal: %s vazia.\n", nome);
         return NULL;
     }
-    NodoLP *aux = playlist->PlaylistPilha->Topo;
+    NodoLP *aux = PilhaCorreta->Topo;
     NodoLP *aux2 = descritor->primeiro;
 
     while(aux != NULL){
@@ -60,12 +110,15 @@ DescLE *ExecucaoPessoal(Playlist *playlist, DescLE *descritor){
             aux2 = aux2->prox;
         }
     
-        playlist->PlaylistPilha->Topo = aux->prox; //retira a musica
-        playlist->PlaylistPilha->tamanho--;
-        if(playlist->PlaylistPilha->tamanho == 0){
-            playlist->PlaylistPilha->Fundo = NULL;
+        PilhaCorreta->Topo = aux->prox; //retira a musica
+        PilhaCorreta->tamanho--;
+        if(PilhaCorreta->tamanho == 0){
+            PilhaCorreta->Fundo = NULL;
         }
         aux = aux->prox;
     }
+    ant->prox = PilhaCorreta->prox;
+    free(PilhaCorreta);
+    PilhaCorreta = NULL;
     return descritor;
 }

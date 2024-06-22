@@ -1,7 +1,7 @@
 #include "bibliotecas.h"
 
-DescFila *playlistRandom(DescLE *descritor, int tamlinhas){
-    DescFila *playlist = inicializaFila();
+Playlist *playlistRandom(DescLE *descritor, int tamlinhas, Playlist *playlist){
+    DescFila *playlistFila = inicializaFila();
     NodoLP *aux = descritor->primeiro;
     srand(time(NULL));
     int auxiliar, auxiliar2, tamanho, tamanhoaux = 0;
@@ -20,17 +20,32 @@ DescFila *playlistRandom(DescLE *descritor, int tamlinhas){
             }
         }
         NodoFila *nodo = inicializaNodoF(aux->info);
-        playlist = addNodoFila(playlist, nodo);
+        playlistFila = addNodoFila(playlistFila, nodo);
         aux = descritor->primeiro;
         tamanhoaux++;
     }
     printf("Criacao da playlist randomica concluida!\n");
+    printf("De um nome a playlist: ");
+    setbuf(stdin, NULL);
+    fgets(playlistFila->nome, 100, stdin);
+    playlistFila->nome[strlen(playlistFila->nome) - 1] = '\0';
+    //adiciona a nova fila na playlist:
+    if(playlist->primeiroFila == NULL){
+        playlist->primeiroFila = playlistFila;
+    }
+    else{
+        DescFila *auxplaylist = playlist->primeiroFila;
+        while(auxplaylist->prox != NULL){
+            auxplaylist = auxplaylist->prox;
+        }
+        auxplaylist->prox = playlistFila;
+    }
     return playlist;
 }
 
 
-DescPilha *playlistPessoal(DescLE *descritor){
-    DescPilha *playlist = malloc(sizeof(DescPilha));
+Playlist *playlistPessoal(DescLE *descritor, Playlist *playlist){
+    DescPilha *playlistPilha = malloc(sizeof(DescPilha));
     NodoLP *aux = descritor->primeiro;
     Musica *musica;
     int auxiliar = 1;
@@ -41,7 +56,7 @@ DescPilha *playlistPessoal(DescLE *descritor){
         if(escolha == 'i' || escolha == 'I'){
             musica = Busca(descritor);
             NodoLP *nodo = inicializaNodoP(musica);
-            playlist = addNodoPilha(playlist, nodo);
+            playlistPilha = addNodoPilha(playlistPilha, nodo);
         }
         else if(escolha == 'c' || escolha == 'C'){
             auxiliar = 0;
@@ -50,6 +65,22 @@ DescPilha *playlistPessoal(DescLE *descritor){
             printf("\nOpcao incorreta, tente novamente.\n");
         }
     }while(auxiliar == 1);
+
+    printf("De um nome a playlist: ");
+    setbuf(stdin, NULL);
+    fgets(playlistPilha->nome, 100, stdin);
+    playlistPilha->nome[strlen(playlistPilha->nome) - 1] = '\0';
+    //adiciona a nova pilha na playlist:
+    if(playlist->primeiroPilha == NULL){
+        playlist->primeiroPilha = playlistPilha;
+    }
+    else{
+        DescPilha *auxplaylist = playlist->primeiroPilha;
+        while(auxplaylist->prox != NULL){
+            auxplaylist = auxplaylist->prox;
+        }
+        auxplaylist->prox = playlistPilha;
+    }
     printf("Criacao da playlist pessoal concluida!\n");
     return playlist;
 }

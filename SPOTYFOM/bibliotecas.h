@@ -8,8 +8,8 @@ typedef struct musica Musica;
 typedef struct nodoLE NodoLP;
 typedef struct dscLE DescLE;
 typedef struct nodo_fila NodoFila;
-typedef struct dscFila DescFila;
-typedef struct desc_Pilha DescPilha;
+typedef struct FilaPlaylist DescFila;
+typedef struct PilhaPlaylist DescPilha;
 typedef struct Playlist Playlist;
 
 struct musica{
@@ -40,20 +40,26 @@ struct nodo_fila{
 };
 
 
-struct dscFila{
+struct FilaPlaylist{
     NodoFila *head, *tail;
+    struct FilaPlaylist *prox;
+    char nome[100];
     int tamanho;
 };
 
 
-struct desc_Pilha{
+struct PilhaPlaylist{
     NodoLP *Fundo, *Topo;
+    struct PilhaPlaylist *prox;
+    char nome[100];
     int tamanho;
 };
+
+
 
 struct Playlist{
-    DescFila *PlaylistFila;
-    DescPilha *PlaylistPilha;
+    DescFila *primeiroFila;
+    DescPilha *primeiroPilha;
 };
 
 
@@ -70,8 +76,8 @@ NodoFila *inicializaNodoF(Musica *musica);
 DescFila *addNodoFila(DescFila *descritor, NodoFila *nodo);
 NodoLP *inicializaNodoP(Musica *musica);
 DescPilha *addNodoPilha(DescPilha *descritor, NodoLP *nodo);
-DescFila *playlistRandom(DescLE *descritor, int tamlinhas);
-DescPilha *playlistPessoal(DescLE *descritor);
+Playlist *playlistRandom(DescLE *descritor, int tamlinhas, Playlist *playlist);
+Playlist *playlistPessoal(DescLE *descritor, Playlist *playlist);
 DescLE *ExecucaoRandom(Playlist *playlist, DescLE *descritor);
 DescLE *ExecucaoPessoal(Playlist *playlist, DescLE *descritor);
 void Relatorio(Playlist *playlist, DescLE *descritor);

@@ -14,6 +14,7 @@ int main(void){
     do{ 
         printf("\n======================\n");
         printf("Digite:\n[E]xecutar\n[P]laylist\n[B]uscar\n[I]mprimir\n[R]elatorio\n[K]Backup\n[S]air\n");
+        getchar();
         setbuf(stdin, NULL);
         scanf(" %c", &escolha);
         switch(escolha){
@@ -35,10 +36,10 @@ int main(void){
                 setbuf(stdin, NULL);
                 scanf(" %c", &escolhaplaylist);
                 if(escolhaplaylist == 'A' || escolhaplaylist == 'a'){
-                    playlist->PlaylistFila = playlistRandom(descritorLE, tamlinhas);
+                    playlist = playlistRandom(descritorLE, tamlinhas, playlist);
                 }
                 else if(escolhaplaylist == 'P' || escolhaplaylist == 'p'){
-                    playlist->PlaylistPilha = playlistPessoal(descritorLE);
+                    playlist = playlistPessoal(descritorLE, playlist);
                 }
                 else {
                     printf("Opcao incorreta.");
@@ -52,7 +53,7 @@ int main(void){
 
             case 'r':
             case 'R':
-
+                Relatorio(playlist, descritorLE);
                 break;
             
             case 'b':
