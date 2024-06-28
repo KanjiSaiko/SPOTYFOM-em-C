@@ -64,7 +64,7 @@ int main(void){
 
             case 'k':
             case 'K':
-                
+                Backup(descritorLE);
                 break;
 
             case 's':

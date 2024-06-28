@@ -41,8 +41,8 @@ DescLE *parser(int *tamLinhas){
             token = strtok(linhaS, ";"); //percorre a string ate encontrar ;
             strcpy(musica->artista, token);
             token = strtok(NULL, ";"); //limpa o que foi lido e continua de onde parou
-            strcpy(codigo, token);
-            musica->codigo = atoi(codigo);
+            //strcpy(codigo, token);
+            musica->codigo = i;
             token = strtok(NULL, ";"); //limpa o que foi lido e continua de onde parou
             strcpy(musica->titulo, token);
             token = strtok(NULL, ";"); //limpa o que foi lido e continua de onde parou

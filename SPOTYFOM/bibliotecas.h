@@ -81,3 +81,4 @@ Playlist *playlistPessoal(DescLE *descritor, Playlist *playlist);
 DescLE *ExecucaoRandom(Playlist *playlist, DescLE *descritor);
 DescLE *ExecucaoPessoal(Playlist *playlist, DescLE *descritor);
 void Relatorio(Playlist *playlist, DescLE *descritor);
+void *Backup(DescLE *descritor);
