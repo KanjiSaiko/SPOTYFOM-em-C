@@ -15,11 +15,12 @@ void Relatorio(Playlist *playlist, DescLE *descritor){
             if(arqA){
                 fprintf(arqA, "%d\n", descritor->tamanho);
                 while(aux != NULL){
-                    fprintf(arqA, "%s;", aux->info->artista);
-                    fprintf(arqA, "%d;", aux->info->codigo);
-                    fprintf(arqA, "%s;", aux->info->titulo);
-                    fprintf(arqA, "%s;", aux->info->letra);
-                    fprintf(arqA, "%d\n", aux->info->execucoes);
+                    fprintf(arqA, "Artista: [%s]\n", aux->info->artista);
+                    fprintf(arqA, "Codigo: [%d]\n", aux->info->codigo);
+                    fprintf(arqA, "Titulo [%s]\n", aux->info->titulo);
+                    fprintf(arqA, "Letra: [%s]\n", aux->info->letra);
+                    fprintf(arqA, "Vezes escutada: [%d]\n", aux->info->execucoes);
+                    fprintf(arqA, "===========================\n\n");
                     aux = aux->prox;
                 }
                 fclose(arqA);
@@ -44,11 +45,12 @@ void Relatorio(Playlist *playlist, DescLE *descritor){
                     fprintf(arqP, "Playlist: %s\n", playlistsPilhas->nome);
                     fprintf(arqP, "%d\n", playlistsPilhas->tamanho);
                     while(auxPilha != NULL){
-                        fprintf(arqP, "%s;", auxPilha->info->artista);
-                        fprintf(arqP, "%d;", auxPilha->info->codigo);
-                        fprintf(arqP, "%s;", auxPilha->info->titulo);
-                        fprintf(arqP, "%s;", auxPilha->info->letra);
-                        fprintf(arqP, "%d\n", auxPilha->info->execucoes);
+                        fprintf(arqP, "Artista: [%s]\n", auxPilha->info->artista);
+                        fprintf(arqP, "Codigo: [%d]\n", auxPilha->info->codigo);
+                        fprintf(arqP, "Titulo: [%s]\n", auxPilha->info->titulo);
+                        fprintf(arqP, "Letra: [%s]\n", auxPilha->info->letra);
+                        fprintf(arqP, "Vezes escutada: [%d]\n", auxPilha->info->execucoes);
+                        fprintf(arqP, "===========================\n\n");
                         auxPilha = auxPilha->prox;
                     }
                     fprintf(arqP, "\n\n");
@@ -71,11 +73,12 @@ void Relatorio(Playlist *playlist, DescLE *descritor){
                     fprintf(arqR, "Playlist: %s\n", playlistsFila->nome);
                     fprintf(arqR, "%d\n", playlistsFila->tamanho);
                     while(auxFila != NULL){
-                        fprintf(arqR, "%s;", auxFila->info->artista);
-                        fprintf(arqR, "%d;", auxFila->info->codigo);
-                        fprintf(arqR, "%s;", auxFila->info->titulo);
-                        fprintf(arqR, "%s;", auxFila->info->letra);
-                        fprintf(arqR, "%d\n", auxFila->info->execucoes);
+                        fprintf(arqR, "Artista: [%s]\n", auxFila->info->artista);
+                        fprintf(arqR, "Codigo: [%d]\n;", auxFila->info->codigo);
+                        fprintf(arqR, "Titulo: [%s]\n", auxFila->info->titulo);
+                        fprintf(arqR, "Letra: [%s]\n", auxFila->info->letra);
+                        fprintf(arqR, "Vezes escutada: [%d]\n", auxFila->info->execucoes);
+                        fprintf(arqR, "===========================\n\n");
                         auxFila = auxFila->prox;
                     }
                     fprintf(arqR, "\n\n");

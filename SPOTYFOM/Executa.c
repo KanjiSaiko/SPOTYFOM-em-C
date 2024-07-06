@@ -19,8 +19,12 @@ DescLE *ExecucaoRandom(Playlist *playlist, DescLE *descritor){ //na playlist ran
             FilaCorreta = FilaCorreta->prox;
         }
 
-        if(FilaCorreta == NULL)
+        if(FilaCorreta == NULL){
             printf("Playlist nao encontrada. Tente novamente.\n");
+            FilaCorreta = playlist->primeiroFila;
+            //strcpy(nome, "\0");
+        }
+            
         
     }while(loop == 1);
 
