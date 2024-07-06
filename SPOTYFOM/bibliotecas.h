@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-
+#include <ncurses.h>
+#include <menu.h>
 
 typedef struct musica Musica;
 typedef struct nodoLE NodoLP;
@@ -82,3 +83,5 @@ DescLE *ExecucaoRandom(Playlist *playlist, DescLE *descritor);
 DescLE *ExecucaoPessoal(Playlist *playlist, DescLE *descritor);
 void Relatorio(Playlist *playlist, DescLE *descritor);
 void *Backup(DescLE *descritor);
+void print_in_middle(WINDOW *win, int starty, int startx, int width, char *string, chtype color);
+int menu();
