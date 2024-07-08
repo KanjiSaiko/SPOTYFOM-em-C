@@ -5,7 +5,7 @@ int main(void){
     DescLE *descritorLE = NULL;
     Playlist *playlist = NULL;
     char escolha, escolhaplaylist, escolhaExec;
-    int escolhaaux = 1, tamlinhas;
+    int tamlinhas;
     Musica *musicaBuscada = NULL;
     //primeiro le arquivo:
     descritorLE = parser(&tamlinhas); //abre e le o arquivo, adicionando cada musica em nodos e por fim no descritor
@@ -13,26 +13,24 @@ int main(void){
     //depois apresenta o menu de opcoes
     do{ 
         printf("\n======================\n");
-        printf("Digite:\n[E]xecutar\n[P]laylist\n[B]uscar\n[I]mprimir\n[R]elatorio\n[K]Backup\n[S]air\n");
+        printf("Digite:\n[1]Executar\n[2]Playlist\n[3]Buscar\n[4]Imprimir\n[5]Relatorio\n[6]Backup\n[0]Sair\n");
         getchar();
         setbuf(stdin, NULL);
         scanf(" %c", &escolha);
         switch(escolha){
-            case 'e':
-            case 'E':
+            case '1':
                 //ADICIONAR A QUESTAO DE QUANDO EXECUTAR E EXCLUIR A PLAYLIST, NAO IMPRIMI-LO NO RELATORIO.
                 printf("Execute a playlist: [A]leatorio || [P]essoal: ");
                 scanf(" %c", &escolhaExec);
-                if(escolhaplaylist == 'A' || escolhaplaylist == 'a'){
+                if(escolhaExec == 'A' || escolhaExec == 'a'){
                     descritorLE = ExecucaoRandom(playlist, descritorLE);
                 }
-                else if(escolhaplaylist == 'P' || escolhaplaylist == 'p'){
+                else if(escolhaExec == 'P' || escolhaExec== 'p'){
                     descritorLE = ExecucaoPessoal(playlist, descritorLE);
                 }
                 break;
             
-            case 'p':
-            case 'P':
+            case '2':
                 printf("Digite: [A]leatorio || [P]essoal: ");
                 setbuf(stdin, NULL);
                 scanf(" %c", &escolhaplaylist);
@@ -47,32 +45,26 @@ int main(void){
                 }
                 break;
 
-            case 'i':
-            case 'I':
+            case '3':
                 imprime(descritorLE);
                 break;
 
-            case 'r':
-            case 'R':
+            case '4':
                 Relatorio(playlist, descritorLE);
                 break;
             
-            case 'b':
-            case 'B':
+            case '5':
                 musicaBuscada = Busca(descritorLE);
                 break;
 
-            case 'k':
-            case 'K':
+            case '6':
                 Backup(descritorLE);
                 break;
 
-            case 's':
-            case 'S':
-                escolhaaux = 0;
+            case '0':
                 break;
         }
-    }while(escolhaaux != 0);
+    }while(escolha != '0');
 
     return 0;
 }

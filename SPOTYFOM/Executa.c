@@ -3,36 +3,34 @@
 
 DescLE *ExecucaoRandom(Playlist *playlist, DescLE *descritor){ //na playlist randomica
     char nome[100];
-    int loop = 1;
     DescFila *FilaCorreta = playlist->primeiroFila;
     DescFila *ant;
-    do{
+        if(playlist->primeiroFila == NULL){
+            printf("Crie uma playlist anteriormente\n");
+            return descritor;
+        }
         printf("Digite o nome da playlist a ser executada: ");
         setbuf(stdin, NULL);
         scanf("%s", nome);
         while(FilaCorreta != NULL){
             ant = FilaCorreta;
             if(strcmp(nome, FilaCorreta->nome) == 0){
-                loop = 0;
                 break;
             }
             FilaCorreta = FilaCorreta->prox;
         }
 
         if(FilaCorreta == NULL){
-            printf("Playlist nao encontrada. Tente novamente.\n");
-            FilaCorreta = playlist->primeiroFila;
+            printf("Playlist nao encontrada.\n");
+            return descritor;
             //strcpy(nome, "\0");
         }
-            
-        
-    }while(loop == 1);
+
 
     if(FilaCorreta->head == NULL){
         printf("Playlist %s vazia.\n", nome);
-        return NULL;
     }
-
+    
     NodoFila *aux = FilaCorreta->head;
     NodoLP *aux2 = descritor->primeiro;
     
@@ -69,32 +67,29 @@ DescLE *ExecucaoRandom(Playlist *playlist, DescLE *descritor){ //na playlist ran
 
 DescLE *ExecucaoPessoal(Playlist *playlist, DescLE *descritor){
     char nome[100];
-    int loop = 1;
     DescPilha *PilhaCorreta = playlist->primeiroPilha;
     DescPilha *ant;
-    do{
         printf("Digite o nome da playlist a ser executada: ");
+        getchar();
+        setbuf(stdin, NULL);
         fgets(nome, 100, stdin);
         nome[strlen(nome) - 1] = '\0';
         while(PilhaCorreta != NULL){
             ant = PilhaCorreta;
             if(strcmp(nome, PilhaCorreta->nome) == 0){
-                loop = 0;
                 break;
             }
             PilhaCorreta = PilhaCorreta->prox;
         }
         
-        if(PilhaCorreta == NULL)
+        if(PilhaCorreta == NULL){
             printf("Playlist nao encontrada. Tente novamente.\n");
-        
-    }while(loop == 1);
-
-
+            return descritor;
+        }
 
     if(PilhaCorreta->Topo == NULL){
         printf("Playlist Pessoal: %s vazia.\n", nome);
-        return NULL;
+        return descritor;
     }
     NodoLP *aux = PilhaCorreta->Topo;
     NodoLP *aux2 = descritor->primeiro;

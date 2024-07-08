@@ -44,26 +44,23 @@ Playlist *playlistRandom(DescLE *descritor, int tamlinhas, Playlist *playlist){
 
 
 Playlist *playlistPessoal(DescLE *descritor, Playlist *playlist){
-    DescPilha *playlistPilha = malloc(sizeof(DescPilha));
-    NodoLP *aux = descritor->primeiro;
+    DescPilha *playlistPilha = inicializaPilha();
+    //NodoLP *aux = descritor->primeiro;
     Musica *musica;
     int auxiliar = 1;
     char escolha;
+
     do{
-        printf("Digite: [I]nserir || [C]ancelar insercao\n");
+        musica = Busca(descritor);
+        NodoLP *nodo = inicializaNodoP(musica);
+        playlistPilha = addNodoPilha(playlistPilha, nodo);
+        printf("Digite [1] para adicionar mais Musicas || [0] para criar a playlist\n");
         scanf(" %c", &escolha);
-        if(escolha == 'i' || escolha == 'I'){
-            musica = Busca(descritor);
-            NodoLP *nodo = inicializaNodoP(musica);
-            playlistPilha = addNodoPilha(playlistPilha, nodo);
+        if(escolha != '1' && escolha != '0'){
+            printf("Opcao inexistente\n");
         }
-        else if(escolha == 'c' || escolha == 'C'){
-            auxiliar = 0;
-        }
-        else {
-            printf("\nOpcao incorreta, tente novamente.\n");
-        }
-    }while(auxiliar == 1);
+    }while(escolha != '0');
+    
 
     printf("De um nome a playlist: ");
     setbuf(stdin, NULL);
@@ -79,7 +76,9 @@ Playlist *playlistPessoal(DescLE *descritor, Playlist *playlist){
         }
         auxplaylist->prox = playlistPilha;
     }
+    getchar();
     setbuf(stdin, NULL);
+   
     printf("Criacao da playlist pessoal concluida!\n");
     return playlist;
 }

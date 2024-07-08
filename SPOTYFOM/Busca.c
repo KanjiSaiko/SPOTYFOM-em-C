@@ -16,6 +16,8 @@ Musica *Busca(DescLE *descritor){
     scanf("%d", &codigo);
     artista[strlen(artista) - 1] = '\0'; //remove a quebra de linha e coloca terminador nulo
     titulo[strlen(titulo) - 1] = '\0';
+    setbuf(stdin, NULL);
+    //getchar();
     while(aux != NULL){
         if(strcmp(aux->info->artista, artista) == 0 && strcmp(aux->info->titulo, titulo) == 0 && codigo == aux->info->codigo){
             printf("\n==========================\n");
@@ -27,6 +29,7 @@ Musica *Busca(DescLE *descritor){
         }
         aux = aux->prox;
     }
+    
     printf("Musica nao encontrada.\n");
 
 }
