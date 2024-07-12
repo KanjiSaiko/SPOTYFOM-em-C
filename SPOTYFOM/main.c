@@ -1,5 +1,5 @@
 #include "bibliotecas.h"
-
+#include "INTERFACES.h"
 
 int main(void){
     DescLE *descritorLE = NULL;
@@ -8,15 +8,24 @@ int main(void){
     int tamlinhas;
     Musica *musicaBuscada = NULL;
     //primeiro le arquivo:
-    descritorLE = parser(&tamlinhas); //abre e le o arquivo, adicionando cada musica em nodos e por fim no descritor
+        descritorLE = parser(&tamlinhas); //abre e le o arquivo, adicionando cada musica em nodos e por fim no descritor
     playlist = inicializaPlaylist();
+
+    //INICIALIZA O NCURSES
+        initscr();
+        cbreak();
+        noecho();
+        keypad(stdscr, TRUE);
+        curs_set(0);
     //depois apresenta o menu de opcoes
     do{ 
-        printf("\n======================\n");
+        system("clear");
+        escolha = interface(playlist, escolha);
+        /*printf("\n======================\n");
         printf("Digite:\n[1]Executar\n[2]Playlist\n[3]Buscar\n[4]Imprimir\n[5]Relatorio\n[6]Backup\n[0]Sair\n");
         getchar();
         setbuf(stdin, NULL);
-        scanf(" %c", &escolha);
+        scanf(" %c", &escolha);*/
         switch(escolha){
             case '1':
                 //ADICIONAR A QUESTAO DE QUANDO EXECUTAR E EXCLUIR A PLAYLIST, NAO IMPRIMI-LO NO RELATORIO.
@@ -65,6 +74,8 @@ int main(void){
                 break;
         }
     }while(escolha != '0');
-
+    
+    //ENCERRA NCURSES
+        endwin();
     return 0;
 }

@@ -1,9 +1,11 @@
+#ifndef bibliotecas_h
+#define bibliotecas_h
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include <ncurses.h>
-#include <menu.h>
+
 
 typedef struct musica Musica;
 typedef struct nodoLE NodoLP;
@@ -12,6 +14,7 @@ typedef struct nodo_fila NodoFila;
 typedef struct FilaPlaylist DescFila;
 typedef struct PilhaPlaylist DescPilha;
 typedef struct Playlist Playlist;
+
 
 struct musica{
     char titulo[256];
@@ -83,5 +86,6 @@ DescLE *ExecucaoRandom(Playlist *playlist, DescLE *descritor);
 DescLE *ExecucaoPessoal(Playlist *playlist, DescLE *descritor);
 void Relatorio(Playlist *playlist, DescLE *descritor);
 void *Backup(DescLE *descritor);
-void print_in_middle(WINDOW *win, int starty, int startx, int width, char *string, chtype color);
-int menu();
+
+
+#endif
