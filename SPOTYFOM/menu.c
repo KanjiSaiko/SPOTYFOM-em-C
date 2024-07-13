@@ -82,6 +82,7 @@ void desenhaTelaInicial(struct TELA *tela, float *altura, float *largura){
 
     // Define um par de cores (texto branco no fundo preto)
     init_pair(1, COLOR_BLACK, COLOR_WHITE);
+    init_pair(2, COLOR_WHITE, COLOR_BLACK);
 
     //puts("Debug");
     // Criação dos contêineres
@@ -115,7 +116,9 @@ void desenhaMenu(struct TELA *tela, float largura, Playlist *playlist)
     attron(COLOR_PAIR(1)); // Ativa o par de cores número 1
 
     //HEAR
+    wattron(tela->header, A_BLINK);
     mvwprintw(tela->header, 1, (largura-strlen("BEM-VINDO AO SPOTYFOM"))/2, "BEM-VINDO AO SPOTYFOM");
+    wattron(tela->header, A_BLINK);
 
     //MENU
     mvwprintw(tela->menu, 4,  ((largura/2)-strlen("----MENU----"))/2, "----MENU----");
@@ -141,7 +144,12 @@ void desenhaMenu(struct TELA *tela, float largura, Playlist *playlist)
         //caso exista:
             else{
                 while(auxFila != NULL){
+
+                    wattron(tela->content, A_REVERSE | A_BOLD);//REVERTE AS CORES DO FUNDO COM O TEXTO E DEIXA EM NEGRITO
+
                     mvwprintw(tela->content, 8, tamanhoLinhaF, "%s-%d", auxFila->nome, auxFila->tamanho);
+                    wattroff(tela->content, A_REVERSE | A_BOLD); // DESLIGA OS EFEITOS
+
                     //copio o nome anterior para saber o espaçamento
                         snprintf(nomeAntF, sizeof(nomeAntF), "%s-%d", auxFila->nome, auxFila->tamanho);
                         tamanhoLinhaF = tamanhoLinhaF + strlen(nomeAntF) + 2;
