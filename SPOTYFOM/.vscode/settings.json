@@ -5,6 +5,7 @@
         "INTERFACE.C": "cpp",
         "curses.h": "c",
         "menu.h": "c",
-        "interfaces.h": "c"
+        "interfaces.h": "c",
+        "imprimeexecucoes.h": "c"
     }
 }

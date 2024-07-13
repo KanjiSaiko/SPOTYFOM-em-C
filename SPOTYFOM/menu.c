@@ -16,41 +16,26 @@ char terminal(Playlist *playlist) {
 
         ch = getch();
         switch (ch) {
-            case KEY_F(1):
+            case '0':
                 escolha = '0';
                 break;
-            case KEY_F(2):
+            case '1':
                 escolha = '1';
                 break;
-            case KEY_F(3):
+            case '2':
                 escolha = '2';
                 break;
-            case KEY_F(4):
+            case '3':
                 escolha = '3';
                 break;
-            case KEY_F(5):
+            case '4':
                 escolha = '4';
                 break;
-            case KEY_F(6):
+            case '5':
                 escolha = '5';
                 break;
-            case KEY_F(7):
+            case '6':
                 escolha = '6';
-                break;
-            case KEY_F(8):
-                escolha = '7';
-                break;
-            case 'r':
-            case 'R':
-                escolha = '8';
-                break;
-            case 's':
-            case 'S':
-                escolha = '9';
-                break;
-            case 'b':
-            case 'B':
-                escolha = 'a';
                 break;
         }
         //puts(&escolha);
@@ -106,6 +91,7 @@ void desenhaTelaInicial(struct TELA *tela, float *altura, float *largura){
 
 void desenhaMenu(struct TELA *tela, float largura, Playlist *playlist)
 {
+    int header_alt, header_larg, cont_alt, cont_larg, foot_alt, foot_larg, maximoR, maximoP;
     int i, tamanhoLinhaF = 18, tamanhoLinhaP = 18;
     char nomeAntP[300], nomeAntF[300];
     DescFila *auxFila = playlist->primeiroFila;
@@ -115,6 +101,10 @@ void desenhaMenu(struct TELA *tela, float largura, Playlist *playlist)
 
     attron(COLOR_PAIR(1)); // Ativa o par de cores número 1
 
+    getmaxyx(tela->header, header_alt, header_larg);
+    getmaxyx(tela->content, cont_alt, cont_larg);
+    getmaxyx(tela->footer, foot_alt, foot_larg);
+
     //HEAR
     wattron(tela->header, A_BLINK);
     mvwprintw(tela->header, 1, (largura-strlen("BEM-VINDO AO SPOTYFOM"))/2, "BEM-VINDO AO SPOTYFOM");
@@ -122,13 +112,13 @@ void desenhaMenu(struct TELA *tela, float largura, Playlist *playlist)
 
     //MENU
     mvwprintw(tela->menu, 4,  ((largura/2)-strlen("----MENU----"))/2, "----MENU----");
-    mvwprintw(tela->menu, 7,  ((largura/2)-strlen("F3     ADICIONAR PLAYLIST"))/2, "F2     EXECUTAR");
-    mvwprintw(tela->menu, 8,  ((largura/2)-strlen("F3     ADICIONAR PLAYLIST"))/2, "F3     ADICIONAR PLAYLIST");
-    mvwprintw(tela->menu, 9,  ((largura/2)-strlen("F3     ADICIONAR PLAYLIST"))/2, "F4     BUSCAR MUSICA");
-    mvwprintw(tela->menu, 10,  ((largura/2)-strlen("F3     ADICIONAR PLAYLIST"))/2, "F5     IMPRIMIR");
-    mvwprintw(tela->menu, 11,  ((largura/2)-strlen("F3     ADICIONAR PLAYLIST"))/2, "F6     RELATORIO");
-    mvwprintw(tela->menu, 12, ((largura/2)-strlen("F3     ADICIONAR PLAYLIST"))/2, "F7     BACKUP");
-    mvwprintw(tela->menu, 13, ((largura/2)-strlen("F3     ADICIONAR PLAYLIST"))/2, "F1     ENCERRAR");
+    mvwprintw(tela->menu, 7,  ((largura/2)-strlen("2     ADICIONAR PLAYLIST"))/2, "1     EXECUTAR");
+    mvwprintw(tela->menu, 8,  ((largura/2)-strlen("2     ADICIONAR PLAYLIST"))/2, "2     ADICIONAR PLAYLIST");
+    mvwprintw(tela->menu, 9,  ((largura/2)-strlen("2     ADICIONAR PLAYLIST"))/2, "3     BUSCAR MUSICA");
+    mvwprintw(tela->menu, 10,  ((largura/2)-strlen("2     ADICIONAR PLAYLIST"))/2, "4     IMPRIMIR");
+    mvwprintw(tela->menu, 11,  ((largura/2)-strlen("2     ADICIONAR PLAYLIST"))/2, "5     RELATORIO");
+    mvwprintw(tela->menu, 12, ((largura/2)-strlen("2     ADICIONAR PLAYLIST"))/2, "6     BACKUP");
+    mvwprintw(tela->menu, 13, ((largura/2)-strlen("2     ADICIONAR PLAYLIST"))/2, "0     ENCERRAR");
 
         //CONTENT
         mvwprintw(tela->content, 2, 35, "=== PLAYLISTS ===");
@@ -146,7 +136,6 @@ void desenhaMenu(struct TELA *tela, float largura, Playlist *playlist)
                 while(auxFila != NULL){
 
                     wattron(tela->content, A_REVERSE | A_BOLD);//REVERTE AS CORES DO FUNDO COM O TEXTO E DEIXA EM NEGRITO
-
                     mvwprintw(tela->content, 8, tamanhoLinhaF, "%s-%d", auxFila->nome, auxFila->tamanho);
                     wattroff(tela->content, A_REVERSE | A_BOLD); // DESLIGA OS EFEITOS
 

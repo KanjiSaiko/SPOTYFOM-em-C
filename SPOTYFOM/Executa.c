@@ -1,5 +1,5 @@
 #include "bibliotecas.h"
-
+#include "ImprimeExecucoes.h"
 
 DescLE *ExecucaoRandom(Playlist *playlist, DescLE *descritor){ //na playlist randomica
     char nome[100];
@@ -33,7 +33,10 @@ DescLE *ExecucaoRandom(Playlist *playlist, DescLE *descritor){ //na playlist ran
     
     NodoFila *aux = FilaCorreta->head;
     NodoLP *aux2 = descritor->primeiro;
-    
+    //INICIALIZA INTERFACE GRÁFICA
+            inicializa_ncurses();
+            ImprimePlaylistRandom(FilaCorreta);
+            endwin();
     while(aux != NULL){ // executando em fila as musicas:
         printf("\n==========================\n");
         printf("Titulo: %s\n", aux->info->titulo);
@@ -49,7 +52,6 @@ DescLE *ExecucaoRandom(Playlist *playlist, DescLE *descritor){ //na playlist ran
                 }
             aux2 = aux2->prox;
         }
-
         FilaCorreta->head = aux->prox; //retira musica da playlist random
         if(FilaCorreta->head != NULL){
             FilaCorreta->head->ant = NULL;
@@ -94,7 +96,10 @@ DescLE *ExecucaoPessoal(Playlist *playlist, DescLE *descritor){
     }
     NodoLP *aux = PilhaCorreta->Topo;
     NodoLP *aux2 = descritor->primeiro;
-
+    //INICIALIZA INTERFACE GRÁFICA
+            inicializa_ncurses();
+            ImprimePlaylistPessoal(PilhaCorreta);
+            endwin();
     while(aux != NULL){
         printf("\n==========================\n");
         printf("Titulo: %s\n", aux->info->titulo);
