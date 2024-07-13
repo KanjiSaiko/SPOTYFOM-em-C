@@ -141,9 +141,9 @@ void desenhaMenu(struct TELA *tela, float largura, Playlist *playlist)
         //caso exista:
             else{
                 while(auxFila != NULL){
-                    mvwprintw(tela->content, 8, tamanhoLinhaF, "%s", auxFila->nome);
+                    mvwprintw(tela->content, 8, tamanhoLinhaF, "%s-%d", auxFila->nome, auxFila->tamanho);
                     //copio o nome anterior para saber o espaçamento
-                        strcpy(nomeAntF, auxFila->nome);
+                        snprintf(nomeAntF, sizeof(nomeAntF), "%s-%d", auxFila->nome, auxFila->tamanho);
                         tamanhoLinhaF = tamanhoLinhaF + strlen(nomeAntF) + 2;
                     auxFila = auxFila->prox;
                 }
@@ -163,10 +163,11 @@ void desenhaMenu(struct TELA *tela, float largura, Playlist *playlist)
         //caso exista:
             else{
                 while(auxPilha != NULL){
-                    mvwprintw(tela->content, 16, tamanhoLinhaP, "%s", auxPilha->nome);
+                    
+                    mvwprintw(tela->content, 16, tamanhoLinhaP, "%s-%d", auxPilha->nome, auxPilha->tamanho);
                     i++;
                     //copio o nome anterior para saber o espaçamento
-                        strcpy(nomeAntP, auxPilha->nome);
+                        snprintf(nomeAntP, sizeof(nomeAntP), "%s-%d", auxPilha->nome, auxPilha->tamanho);
                         tamanhoLinhaP = tamanhoLinhaP + strlen(nomeAntP) + 2;
                     auxPilha = auxPilha->prox;
                 }
