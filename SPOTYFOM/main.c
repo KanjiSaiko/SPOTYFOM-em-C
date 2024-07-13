@@ -1,5 +1,5 @@
 #include "bibliotecas.h"
-#include "INTERFACES.h"
+#include "menu.h"
 
 int main(void){
     DescLE *descritorLE = NULL;
@@ -11,16 +11,10 @@ int main(void){
         descritorLE = parser(&tamlinhas); //abre e le o arquivo, adicionando cada musica em nodos e por fim no descritor
     playlist = inicializaPlaylist();
 
-    //INICIALIZA O NCURSES
-        initscr();
-        cbreak();
-        noecho();
-        keypad(stdscr, TRUE);
-        curs_set(0);
     //depois apresenta o menu de opcoes
     do{ 
         system("clear");
-        escolha = interface(playlist, escolha);
+        escolha = terminal(playlist);
         /*printf("\n======================\n");
         printf("Digite:\n[1]Executar\n[2]Playlist\n[3]Buscar\n[4]Imprimir\n[5]Relatorio\n[6]Backup\n[0]Sair\n");
         getchar();
@@ -75,7 +69,5 @@ int main(void){
         }
     }while(escolha != '0');
     
-    //ENCERRA NCURSES
-        endwin();
     return 0;
 }

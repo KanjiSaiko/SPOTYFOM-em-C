@@ -1,78 +1,75 @@
-#include "INTERFACES.h"
+/*#include "INTERFACES.h"
 
 
 #define ARRAY_SIZE(a) (sizeof(a) / sizeof(a[0]))
 
-char *escolhas[] = {
-    "EXECUTAR", "ADICIONAR PLAYLIST", "BUSCAR MUSICA", "IMPRIMIR", "RELATORIO", "BACKUP", "SAIR", (char*)NULL,
-};
-
-char interface(Playlist *playlist, char escolha){
-    ITEM **opcoes;
-    MENU *menu;
+char interface(Playlist *playlist){
     TelaPrincipal *tela = (TelaPrincipal*)malloc(sizeof(TelaPrincipal));
-    int n_escolhas, i, c;
+    int i, c, ch;
+    char escolha = ' ';
     float altura, largura;
 
-    //CRIA OS ITENS DO MENU:
-        n_escolhas = ARRAY_SIZE(escolhas);
-        opcoes = (ITEM **)calloc(n_escolhas, sizeof(ITEM*));
-        for(i = 0; i < n_escolhas; i++){
-            opcoes[i] = new_item(escolhas[i], escolhas[i]);
-        }
-
-    //CRIA MENU:
-        menu = new_menu((ITEM**)opcoes);
-
-    //Set menu option not to show the description
-        menu_opts_off(menu, O_SHOWDESC);
-
-    //CRIA JANELA ASSOCIADA AO MENU:
-        desenhaTelaInicial(&altura, &largura, tela);
-        keypad(tela->menu, TRUE);
-
     clear();
-    while(escolha == ' '){
-        //INCIALIZA NCURSES:
+    while (escolha == ' ') 
+    {
+        //INICIALIZA O NCURSES
             initscr();
             cbreak();
             noecho();
             keypad(stdscr, TRUE);
             curs_set(0);
+        desenhaTelaInicial(&altura, &largura, tela);
+        desenhaMenu(tela, largura, altura, playlist);
 
-        //DESENHA A TELA:
-            desenhaMenu(tela, altura, largura, playlist);
+        ch = getch();
+        switch (ch) {
+            case KEY_F(1):
+                escolha = '0';
+                break;
+            case KEY_F(2):
+                escolha = '1';
+                break;
+            case KEY_F(3):
+                escolha = '2';
+                break;
+            case KEY_F(4):
+                escolha = '3';
+                break;
+            case KEY_F(5):
+                escolha = '4';
+                break;
+            case KEY_F(6):
+                escolha = '5';
+                break;
+            case KEY_F(7):
+                escolha = '6';
+                break;
+            case KEY_F(8):
+                escolha = '7';
+                break;
+            case 'r':
+            case 'R':
+                escolha = '8';
+                break;
+            case 's':
+            case 'S':
+                escolha = '9';
+                break;
+            case 'b':
+            case 'B':
+                escolha = 'a';
+                break;
+        }
+        //puts(&escolha);
     }
 
-    
-    //PRINTA O MENU:
-        post_menu(menu);
-        wrefresh(tela->menu);
-
-    //OPCOES:
-        while((c = wgetch(tela->menu)) != KEY_F(1))
-        {       switch(c)
-                {	case KEY_DOWN:
-                    menu_driver(menu, REQ_DOWN_ITEM);
-                    break;
-                case KEY_UP:
-                    menu_driver(menu, REQ_UP_ITEM);
-                    break;
-                case KEY_NPAGE:
-                    menu_driver(menu, REQ_SCR_DPAGE);
-                    break;
-                case KEY_PPAGE:
-                    menu_driver(menu, REQ_SCR_UPAGE);
-                    break;
-            }
-                    wrefresh(tela->menu);
-        }
-
-    unpost_menu(menu);
-        free_menu(menu);
-        for(i = 0; i < n_escolhas; ++i)
-                free_item(opcoes[i]);	
+    clear();
+    endwin();
+    free(tela);
+    puts(&escolha);
+    return escolha;
 }
+
 
 void desenhaTelaInicial(float *altura, float *largura, TelaPrincipal *tela){
     getmaxyx(stdscr, *altura, *largura);
@@ -113,15 +110,15 @@ void desenhaMenu(TelaPrincipal *tela, float largura, float altura, Playlist *pla
         mvwprintw(tela->header, 1, largura*1.8, "BEM-VINDO AO SPOTYFOM");
 
     //MENU:
-        mvwprintw(tela->menu, 3, largura*1.3, "----MENU----");
-        mvwprintw(tela->menu, 5, largura, "EXECUTAR");
-        mvwprintw(tela->menu, 6, largura, "ADICIONAR PLAYLIST");
-        mvwprintw(tela->header, 7, largura, "BUSCAR MUSICA");
-        mvwprintw(tela->header, 8, largura, "IMPRIMIR");
-        mvwprintw(tela->header, 9, largura, "RELATORIO");
-        mvwprintw(tela->header, 10, largura, "BACKUP");
-        mvwprintw(tela->header, 11, largura, "SAIR");
-        if(playlist != NULL){
+        mvwprintw(tela->menu, 8, largura*1.3, "----MENU----");
+        mvwprintw(tela->menu, 10, largura, "EXECUTAR");
+        mvwprintw(tela->menu, 11, largura, "ADICIONAR PLAYLIST");
+        mvwprintw(tela->header, 12, largura, "BUSCAR MUSICA");
+        mvwprintw(tela->header, 13, largura, "IMPRIMIR");
+        mvwprintw(tela->header, 14, largura, "RELATORIO");
+        mvwprintw(tela->header, 15, largura, "BACKUP");
+        mvwprintw(tela->header, 16, largura, "SAIR");
+        /*if(playlist != NULL){
 
         }
         else{
@@ -134,11 +131,11 @@ void desenhaMenu(TelaPrincipal *tela, float largura, float altura, Playlist *pla
 
     //FOOTER
         mvwprintw(tela->footer, 1, largura*2, "AUTOR");
-        mvwprintw(tela->footer, 2, largura, "Henrique de Lima Bortolomiol");
+        mvwprintw(tela->footer, 2, largura/2-strlen("Henrique de Lima Bortolomiol"), "Henrique de Lima Bortolomiol");
         
     // Atualização das janelas
         wrefresh(tela->header);
         wrefresh(tela->menu);
         wrefresh(tela->content);
         wrefresh(tela->footer);
-}
+}*/

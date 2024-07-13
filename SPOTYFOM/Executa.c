@@ -42,10 +42,11 @@ DescLE *ExecucaoRandom(Playlist *playlist, DescLE *descritor){ //na playlist ran
         printf("==========================\n");
         aux2 = descritor->primeiro;
         while(aux2 != NULL){
-            if(aux2->info->codigo == aux->info->codigo){
-                aux2->info->execucoes++;
-                break;
-            }
+            //procuro a musica no acervo atraves do codigo e adiciono uma execução
+                if(aux2->info->codigo == aux->info->codigo){
+                    aux2->info->execucoes++;
+                    break;
+                }
             aux2 = aux2->prox;
         }
 

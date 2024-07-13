@@ -1,13 +1,13 @@
 index:
 	gcc -o executavel *.c -lncurses -lpanel -lmenu
-	clear
+	
 	./executavel
 
 testes:
 	@if [ -f executavel ]; then \
 		rm executavel; \
 	fi
-	clear
+	
 	gcc -o executavel *.c -g -lncurses -lpanel -lmenu
 	gdb ./executavel
 

@@ -1,4 +1,4 @@
-#ifndef interface_h
+/*#ifndef interface_h
 #define interface_h
 
 #include <ncurses.h>
@@ -14,7 +14,7 @@ struct TelaPrincipal{
     WINDOW *footer;
 };
 void desenhaTelaInicial(float *altura, float *largura, TelaPrincipal *tela);
-char interface(Playlist *playlist, char escolha);
+char interface(Playlist *playlist);
 void desenhaMenu(TelaPrincipal *tela, float largura, float altura, Playlist *playlist);
 
 #endif
