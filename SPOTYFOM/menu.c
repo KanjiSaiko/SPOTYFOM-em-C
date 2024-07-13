@@ -105,9 +105,12 @@ void desenhaTelaInicial(struct TELA *tela, float *altura, float *largura){
 
 void desenhaMenu(struct TELA *tela, float largura, Playlist *playlist)
 {
-    int i;
+    int i, tamanhoLinhaF = 18, tamanhoLinhaP = 18;
+    char nomeAntP[300], nomeAntF[300];
     DescFila *auxFila = playlist->primeiroFila;
     DescPilha *auxPilha = playlist->primeiroPilha;
+    nomeAntP[0] = '\0';
+    nomeAntF[0] = '\0';
 
     attron(COLOR_PAIR(1)); // Ativa o par de cores número 1
 
@@ -138,8 +141,10 @@ void desenhaMenu(struct TELA *tela, float largura, Playlist *playlist)
         //caso exista:
             else{
                 while(auxFila != NULL){
-                    mvwprintw(tela->content, 8, 20+i, "%s", auxFila->nome);
-                    i++;
+                    mvwprintw(tela->content, 8, tamanhoLinhaF, "%s", auxFila->nome);
+                    //copio o nome anterior para saber o espaçamento
+                        strcpy(nomeAntF, auxFila->nome);
+                        tamanhoLinhaF = tamanhoLinhaF + strlen(nomeAntF) + 2;
                     auxFila = auxFila->prox;
                 }
             }
@@ -158,8 +163,11 @@ void desenhaMenu(struct TELA *tela, float largura, Playlist *playlist)
         //caso exista:
             else{
                 while(auxPilha != NULL){
-                    mvwprintw(tela->content, 16, 21, "%s", auxPilha->nome);
+                    mvwprintw(tela->content, 16, tamanhoLinhaP, "%s", auxPilha->nome);
                     i++;
+                    //copio o nome anterior para saber o espaçamento
+                        strcpy(nomeAntP, auxPilha->nome);
+                        tamanhoLinhaP = tamanhoLinhaP + strlen(nomeAntP) + 2;
                     auxPilha = auxPilha->prox;
                 }
             }
