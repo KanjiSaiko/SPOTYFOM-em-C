@@ -1,4 +1,4 @@
-#include "bibliotecas.h"
+#include "./Arquivos-h/bibliotecas.h"
 
 
 DescLE *parser(int *tamLinhas){

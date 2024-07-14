@@ -1,5 +1,5 @@
-#include "bibliotecas.h"
-#include "ImprimeExecucoes.h"
+#include "./Arquivos-h/bibliotecas.h"
+#include "./Arquivos-h/ImprimeExecucoes.h"
 
 DescLE *ExecucaoRandom(Playlist *playlist, DescLE *descritor){ //na playlist randomica
     char nome[100];

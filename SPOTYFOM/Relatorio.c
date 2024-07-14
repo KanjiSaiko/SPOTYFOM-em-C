@@ -1,4 +1,4 @@
-#include "bibliotecas.h"
+#include "./Arquivos-h/bibliotecas.h"
 
 
 void Relatorio(Playlist *playlist, DescLE *descritor){

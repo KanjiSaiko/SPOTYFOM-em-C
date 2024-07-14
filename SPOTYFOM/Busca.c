@@ -1,5 +1,5 @@
-#include "bibliotecas.h"
-
+#include "./Arquivos-h/bibliotecas.h"
+#include "./Arquivos-h/imprimeIMPRESSAO.h"
 
 Musica *Busca(DescLE *descritor){
     NodoLP *aux = descritor->primeiro;
@@ -25,11 +25,12 @@ Musica *Busca(DescLE *descritor){
             printf("Letra: %s\n", aux->info->letra);
             printf("Artista: %s\n", aux->info->artista);
             printf("==========================\n");
+            ImprimePorBusca(aux);
             return aux->info;
         }
         aux = aux->prox;
     }
-    
+    ImprimePorBusca(aux);
     printf("Musica nao encontrada.\n");
 
 }

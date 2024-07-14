@@ -11,5 +11,9 @@ void desenhaImpressaoMusicas(float largura, float altura, struct TelaExec *TelaI
 int ImprimePorTitulo(NodoLP *aux);
 void desenhaImpressaoTitulo(float largura, float altura, struct TelaExec *TelaImpressao, NodoLP *aux);
 
+//busca:
+    void desenhaImpressaoBusca(float largura, float altura, struct TelaExec *TelaImpressao, NodoLP *aux);
+    int ImprimePorBusca(NodoLP *aux);
+
 
 #endif

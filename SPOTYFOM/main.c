@@ -1,7 +1,7 @@
-#include "bibliotecas.h"
-#include "menu.h"
-#include "ImprimeExecucoes.h"
-#include "imprimeIMPRESSAO.h"
+#include "./Arquivos-h/bibliotecas.h"
+#include "./Arquivos-h/menu.h"
+#include "./Arquivos-h/ImprimeExecucoes.h"
+#include "./Arquivos-h/imprimeIMPRESSAO.h"
 
 int main(void){
     DescLE *descritorLE = NULL;

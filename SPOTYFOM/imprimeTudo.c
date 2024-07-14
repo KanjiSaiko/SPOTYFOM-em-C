@@ -1,5 +1,5 @@
-#include "bibliotecas.h"
-#include "imprimeIMPRESSAO.h"
+#include "./Arquivos-h/bibliotecas.h"
+#include "./Arquivos-h/imprimeIMPRESSAO.h"
 
 
 void imprime(DescLE *descritor){
@@ -10,11 +10,13 @@ void imprime(DescLE *descritor){
     do{
         aux = descritor->primeiro;
         printf("Digite: [1] Imprimir pelo titulo || [2] para imprimir tudo || Qualquer outra tecla para voltar\n");
+        setbuf(stdin, NULL);
         scanf(" %c", &escolha);
         switch(escolha){
             case '1':
                 printf("Digite o titulo a ser buscado: ");
                 setbuf(stdin, NULL);
+                getchar();
                 fgets(titulo, 256, stdin);
                 titulo[strlen(titulo) - 1] = '\0';
                 while(aux != NULL){

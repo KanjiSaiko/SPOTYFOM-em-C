@@ -1,4 +1,4 @@
-#include "bibliotecas.h"
+#include "./Arquivos-h/bibliotecas.h"
 
 Playlist *playlistRandom(DescLE *descritor, int tamlinhas, Playlist *playlist){
     DescFila *playlistFila = inicializaFila();
@@ -6,6 +6,7 @@ Playlist *playlistRandom(DescLE *descritor, int tamlinhas, Playlist *playlist){
     srand(time(NULL));
     int auxiliar, auxiliar2, tamanho, tamanhoaux = 0;
     printf("Digite o tamanho da playlist: ");
+    setbuf(stdin, NULL);
     scanf("%d", &tamanho);
     while(tamanhoaux != tamanho){
         //inicío os valores dos auxiliares como aleatorios

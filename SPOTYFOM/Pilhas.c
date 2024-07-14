@@ -1,4 +1,4 @@
-#include "bibliotecas.h"
+#include "./Arquivos-h/bibliotecas.h"
 
 DescPilha *addNodoPilha(DescPilha *descritor, NodoLP *nodo){
     if(descritor->Topo == NULL){
