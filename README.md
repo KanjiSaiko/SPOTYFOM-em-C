@@ -1,25 +1,11 @@
-# SPOTYFOM-em-C
-
- O Alcemar teve uma super ideia inovadora de criar um aplicativo de execução de
-músicas, o qual ele teve a genuína ideia de chamar de SPOTYFOM. Como os
-negócios estão indo muito bem, ele precisa deste novo sistema online o mais rápido
-possível. Assim, você terá a missão de ajudar, com seus conhecimentos de
-programação e estrutura de dados, para resolver este problema.
+![Captura de tela 2024-07-13 230336](https://github.com/user-attachments/assets/a5b5e431-9c50-4907-a59d-ca41f40b0395)# SPOTYFOM-em-C
+"Execução de músicas"
 • O programa inicia com um arquivo de entrada de dados, o qual é o banco de dados
 de músicas do acervo;
 • Este arquivo conterá em sua primeira linha a quantidade de músicas no acervo;
 • Na sequência, em cada linha, serão descritas as informações sobre cada título
 (separados por ponto e virgula “;”);
-• Cada título será transformado em um registro no programa (struct música), conforme
-o modelo abaixo.
-SPOTYFOM
-struct musica{
-  char titulo[256];
-  char artista[256];
-  char letra[256];
-  int codigo;
-  int execucoes; //numero de execuções da musica em playlists
-}
+• Cada título será transformado em um registro no programa (struct música).
 
 O programa carregará no seu início o banco de
 dados de musicas.txt (ou outro arquivo de musicas
@@ -90,3 +76,9 @@ de execuções atualizadas no mesmo padrão do arquivo de entrada inicial.
 opções, o qual informa ao usuário as operações permitidas
 no programa. O programa ficará rodando até que a opção
 do menu de SAIR seja selecionada.
+
+MENU:
+O menu se apresenta da seguinte maneira:
+![Captura de tela 2024-07-13 230336](https://github.com/user-attachments/assets/16933bca-983b-4df0-b239-5aa3c68355e7)
+
+
