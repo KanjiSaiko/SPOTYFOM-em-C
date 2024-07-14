@@ -1,4 +1,4 @@
-![Captura de tela 2024-07-13 230336](https://github.com/user-attachments/assets/a5b5e431-9c50-4907-a59d-ca41f40b0395)# SPOTYFOM-em-C
+# SPOTYFOM-em-C
 "Execução de músicas"
 • O programa inicia com um arquivo de entrada de dados, o qual é o banco de dados
 de músicas do acervo;
