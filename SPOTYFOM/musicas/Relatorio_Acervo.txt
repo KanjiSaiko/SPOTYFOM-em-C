@@ -38,14 +38,14 @@ Artista: [14 Bis]
 Codigo: [5]
 Titulo [ROMANCE]
 Letra: [Flores simples]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [14 Bis]
 Codigo: [6]
 Titulo [UMA VELHA CANcAO ROCK N ROLL]
 Letra: [Olhe oh oh oh venha solte seu corpo n]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [14 Bis]
@@ -66,7 +66,7 @@ Artista: [14 Bis]
 Codigo: [9]
 Titulo [TODO AZUL DO MAR]
 Letra: [Foi assim como ver o mar ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [14 Bis]
@@ -94,7 +94,7 @@ Artista: [4 Non Blondes]
 Codigo: [13]
 Titulo [SPACEMAN]
 Letra: [Starry night bring me down]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [5 a Seco e Maria Gadu]
@@ -136,7 +136,7 @@ Artista: [A Cor Do Som]
 Codigo: [19]
 Titulo [ABRI A PORTA]
 Letra: [Abri a porta apareci ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [A Cor Do Som]
@@ -220,7 +220,7 @@ Artista: [Abba]
 Codigo: [31]
 Titulo [CHIQUITITA]
 Letra: [Chiquitita tell me what s wrong ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Abba]
@@ -290,7 +290,7 @@ Artista: [Abilio Farias]
 Codigo: [41]
 Titulo [VOU FECHAR O CABARE]
 Letra: [Esperei tanto ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Abilio Farias]
@@ -395,7 +395,7 @@ Artista: [Adele]
 Codigo: [56]
 Titulo [CHASING PAVEMENTS]
 Letra: [I heard that you re settled down]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Adele]
@@ -451,7 +451,7 @@ Artista: [Adele]
 Codigo: [64]
 Titulo [MAKE YOU FEEL MY LOVE]
 Letra: [When the rain is blowing in your face]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Adhemar de Campos (Comunidade da Graca)]
@@ -675,7 +675,7 @@ Artista: [Aerosmith]
 Codigo: [96]
 Titulo [I DON T WANT TO MISS A THING]
 Letra: [I could stay awake just to hear you brea ]
-Vezes escutada: [0]
+Vezes escutada: [1]
 ===========================
 
 Artista: [Aerosmith]
@@ -703,7 +703,7 @@ Artista: [Aerosmith]
 Codigo: [100]
 Titulo [JANIE S GOT A GUN]
 Letra: [Dum dum dum honey what have you done]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Aerosmith]
@@ -822,7 +822,7 @@ Artista: [Agnaldo Rayol]
 Codigo: [117]
 Titulo [ACORRENTADOS (ENCADENADOS)]
 Letra: [Talvez fosse melhor se nao voltasses]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Agnaldo Rayol]
@@ -983,7 +983,7 @@ Artista: [Agridoce (Pitty)]
 Codigo: [140]
 Titulo [DANcANDO]
 Letra: [Eu sei que la no fundo]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Agridoce (Pitty)]
@@ -1277,7 +1277,7 @@ Artista: [Alan Parson s Project]
 Codigo: [182]
 Titulo [TIME]
 Letra: [Time flowin  like a river ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Alanis Morissette]
@@ -1312,7 +1312,7 @@ Artista: [Alanis Morissette]
 Codigo: [187]
 Titulo [HAND IN MY POCKET]
 Letra: [I m broke but I m happy I m poor but]
-Vezes escutada: [0]
+Vezes escutada: [1]
 ===========================
 
 Artista: [Alanis Morissette]
@@ -1347,14 +1347,14 @@ Artista: [Albert Hammond]
 Codigo: [192]
 Titulo [IT NEVER RAINS IN SOUTHERN CALIFORNIA]
 Letra: [Got on a board a west bound seven forty ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Albert Hammond]
 Codigo: [193]
 Titulo [FOR THE PEACE OF ALL MANKIND]
 Letra: [You turn me on so bad that there]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Alceu Valenca]
@@ -1403,7 +1403,7 @@ Artista: [Alceu Valenca]
 Codigo: [200]
 Titulo [TROPICANA]
 Letra: [Da manga rosa quero o gosto e o sumo]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Alcione]
@@ -1438,7 +1438,7 @@ Artista: [Alcione]
 Codigo: [205]
 Titulo [EU VOU PRA LAPA]
 Letra: [E ela a dama da noite]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Alcione]
@@ -1634,7 +1634,7 @@ Artista: [Alda Celia]
 Codigo: [233]
 Titulo [VOAR COMO A AGUIA]
 Letra: [E tempo de quebrar cadeias restaurar]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Alda Celia]
@@ -1648,7 +1648,7 @@ Artista: [Alda Celia]
 Codigo: [235]
 Titulo [CHUVA DE AVIVAMENTO]
 Letra: [Nos ultimos dias diz o Senhor]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Alda Celia]
@@ -1753,7 +1753,7 @@ Artista: [Alexandre Pires]
 Codigo: [250]
 Titulo [CIGANO]
 Letra: [Era lindo o nosso amor ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Alexandre Pires]
@@ -1830,7 +1830,7 @@ Artista: [Alexandre Pires]
 Codigo: [261]
 Titulo [VEM ME AMAR (AMAME)]
 Letra: [Vem aqui doce amor ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Alexandre Pires]
@@ -1879,7 +1879,7 @@ Artista: [Alexandre Pires E Fat Family]
 Codigo: [268]
 Titulo [AO SENTIR O AMOR]
 Letra: [A sensacao de ver voce chegar ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Alexandre Pires e Revelacao]
@@ -1900,7 +1900,7 @@ Artista: [Aliados]
 Codigo: [271]
 Titulo [AGUAS PASSADAS]
 Letra: [Deixa rolar deixa fluir]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Aliados]
@@ -2054,14 +2054,14 @@ Artista: [Aline Barros]
 Codigo: [293]
 Titulo [PODER PRA SALVAR]
 Letra: [Todos necessitam de um amor perfeito]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Aline Barros]
 Codigo: [294]
 Titulo [VENTO DO ESPIRITO]
 Letra: [O vento sopra so ele sabe para onde]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Aline Barros]
@@ -2096,7 +2096,7 @@ Artista: [Aline Barros]
 Codigo: [299]
 Titulo [AGUAS DO TRONO]
 Letra: [Aguas que fluem do coracao do Senhor]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Aline Barros]
@@ -2201,7 +2201,7 @@ Artista: [Almir Sater]
 Codigo: [314]
 Titulo [VARANDAS]
 Letra: [A noite e um misterio que eu finjo co]
-Vezes escutada: [0]
+Vezes escutada: [1]
 ===========================
 
 Artista: [Almir Sater]
@@ -2236,7 +2236,7 @@ Artista: [Alok e Bruno Martini]
 Codigo: [319]
 Titulo [HEAR ME NOW]
 Letra: [If you get to hear me now]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Alphaville]
@@ -2355,7 +2355,7 @@ Artista: [Altemar Dutra]
 Codigo: [336]
 Titulo [VAI ANDORINHA]
 Letra: [Ao ver passar no ceu as andorinhas]
-Vezes escutada: [2]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Altemar Dutra]
@@ -2390,7 +2390,7 @@ Artista: [Alvaro e Daniel]
 Codigo: [341]
 Titulo [AQUI E O SEU LUGAR]
 Letra: [E pra voce]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Alvaro Tito]
@@ -2404,7 +2404,7 @@ Artista: [Alvim and The Chipmunks]
 Codigo: [343]
 Titulo [CHRISTMAS DON T BE LATE]
 Letra: [Christmas Christmas time is near]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Amado Batista]
@@ -2474,7 +2474,7 @@ Artista: [Amado Batista]
 Codigo: [353]
 Titulo [AMOR MEU LOUCO AMOR]
 Letra: [Alem do teu olhar o que mais pode ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Amado Batista]
@@ -2509,7 +2509,7 @@ Artista: [Amado Batista]
 Codigo: [358]
 Titulo [AGORA OU NUNCA MAIS]
 Letra: [Sou um amor passageiro que esta]
-Vezes escutada: [0]
+Vezes escutada: [1]
 ===========================
 
 Artista: [Amado Batista]
@@ -2663,7 +2663,7 @@ Artista: [America]
 Codigo: [380]
 Titulo [SISTER GOLDEN HAIR]
 Letra: [Well I tried to make it Sunday]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Ami Suzuki]
@@ -2691,7 +2691,7 @@ Artista: [Amuro Namie]
 Codigo: [384]
 Titulo [STOP THE MUSIC]
 Letra: [Take a brake ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Amuro Namie]
@@ -2740,7 +2740,7 @@ Artista: [Amuro Namie]
 Codigo: [391]
 Titulo [THINK OF ME]
 Letra: [Wakari aeru mainichi ni ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Amuro Namie]
@@ -2866,7 +2866,7 @@ Artista: [Ana Carolina]
 Codigo: [409]
 Titulo [MAIS QUE ISSO]
 Letra: [Eu nao vou gostar de voce]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Ana Carolina]
@@ -2880,7 +2880,7 @@ Artista: [Ana Carolina]
 Codigo: [411]
 Titulo [A CANcAO TOCOU NA HORA ERRADA]
 Letra: [A cancao tocou na hora errada]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Ana Carolina]
@@ -2908,7 +2908,7 @@ Artista: [Ana Carolina]
 Codigo: [415]
 Titulo [RUAS DE OUTONO]
 Letra: [Nas ruas de outono]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Ana Carolina]
@@ -3132,7 +3132,7 @@ Artista: [Anavitoria]
 Codigo: [447]
 Titulo [SINGULAR]
 Letra: [E tao singular o jeito que me observa acordar]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Anavitoria]
@@ -3349,7 +3349,7 @@ Artista: [Ângela Maria e Emilio Santiago]
 Codigo: [478]
 Titulo [ESCUTA]
 Letra: [Escuta]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Angela Ro Ro]
@@ -3405,7 +3405,7 @@ Artista: [Ângela Ro Ro]
 Codigo: [486]
 Titulo [AMOR, MEU GRANDE AMOR]
 Letra: [Amor meu grande amor ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Ângela Ro Ro e Paulinho Moska]
@@ -3580,7 +3580,7 @@ Artista: [Anitta]
 Codigo: [511]
 Titulo [BANG]
 Letra: [Vem na maldade com vontade]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Anitta]
@@ -3734,7 +3734,7 @@ Artista: [Antonio Marcos]
 Codigo: [533]
 Titulo [SOU EU]
 Letra: [Eu nao quero nunca mais]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Antonio Marcos]
@@ -3888,7 +3888,7 @@ Artista: [Aoyama Thelma]
 Codigo: [555]
 Titulo [WASURENAI YO]
 Letra: [Can I still believe in you]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Aoyama Thelma feat. SoulJa]
@@ -3951,7 +3951,7 @@ Artista: [Ara Ketu]
 Codigo: [564]
 Titulo [NOSSA GUERRA SANTA]
 Letra: [Esse nosso amor e uma loucura]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Ara Ketu]
@@ -4014,7 +4014,7 @@ Artista: [Ara Ketu]
 Codigo: [573]
 Titulo [AMANTES]
 Letra: [Vou caminhando nas ruas pensando ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Ara Ketu]
@@ -4126,14 +4126,14 @@ Artista: [Ariana Grande]
 Codigo: [589]
 Titulo [NO TEARS LEFT TO CRY]
 Letra: [Right now I m in a state of mind]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Ariana Grande e Zedd]
 Codigo: [590]
 Titulo [BREAK FREE]
 Letra: [If you want it take it]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Arlindo Cruz]
@@ -4238,7 +4238,7 @@ Artista: [Armandinho]
 Codigo: [605]
 Titulo [SEMENTE]
 Letra: [Semente semente semente semente seme]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Armandinho]
@@ -4294,7 +4294,7 @@ Artista: [Arnaldo Antunes]
 Codigo: [613]
 Titulo [A CASA E SUA]
 Letra: [Nao me falta cadeira nao me falta sofa]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Arnaldo Antunes]
@@ -4490,7 +4490,7 @@ Artista: [As Freneticas]
 Codigo: [641]
 Titulo [O PRETO QUE SATISFAZ]
 Letra: [Hula hula hula hula]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [As Freneticas]
@@ -4567,7 +4567,7 @@ Artista: [Asa De Aguia]
 Codigo: [652]
 Titulo [NAO TEM LUA]
 Letra: [Nao tem lua que faca voce me amar]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Asa De Aguia]
@@ -4679,7 +4679,7 @@ Artista: [Asaph Borba]
 Codigo: [668]
 Titulo [ALTO PREcO]
 Letra: [Eu sei que foi pago um alto preco]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Asaph Borba]
@@ -4693,7 +4693,7 @@ Artista: [Asaph Borba]
 Codigo: [670]
 Titulo [VESTES DE LOUVOR]
 Letra: [Vestes de louvor vestes de louvor]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Asaph Borba]
@@ -4777,7 +4777,7 @@ Artista: [Ataide e Alexandre]
 Codigo: [682]
 Titulo [VOCE MARCOU PRA MIM]
 Letra: [Quando eu acordei pela manha]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Ataide e Alexandre]
@@ -5050,7 +5050,7 @@ Artista: [Aviões Do Forro]
 Codigo: [721]
 Titulo [QUEM E O GOSTOSAO DAQUI?]
 Letra: [Quem e o gostosao daqui sou eu sou eu]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Aviões Do Forro]
@@ -5099,7 +5099,7 @@ Artista: [Aviões do Forro]
 Codigo: [728]
 Titulo [EU NAO VOU MAIS CHORAR]
 Letra: [Eu nao vou mais chorar eu nao vou mais]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Aviões do Forro]
@@ -5190,7 +5190,7 @@ Artista: [Avril Lavigne]
 Codigo: [741]
 Titulo [WISH YOU WERE HERE]
 Letra: [I can be tough I can be strong]
-Vezes escutada: [2]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Avril Lavigne]
@@ -5330,7 +5330,7 @@ Artista: [Babado Novo]
 Codigo: [761]
 Titulo [A CAMISA E O BOTAO]
 Letra: [Quando o sol sair me beije me beije]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Babado Novo]
@@ -5540,7 +5540,7 @@ Artista: [Backstreet Boys]
 Codigo: [791]
 Titulo [MORE THAN THAT]
 Letra: [I can see that you ve been crying ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Backstreet Boys]
@@ -5722,7 +5722,7 @@ Artista: [BANDA BETEL]
 Codigo: [817]
 Titulo [VALEU MEU DEUS]
 Letra: [Vale meu Deus ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Banda Black Rio]
@@ -5736,7 +5736,7 @@ Artista: [Banda Brasil]
 Codigo: [819]
 Titulo [EU TE AMO,TE AMO,TE AMO]
 Letra: [Tanto tempo longe de voce]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Banda Brasil]
@@ -5939,7 +5939,7 @@ Artista: [Banda Cheiro de Amor]
 Codigo: [848]
 Titulo [PENSE EM MIM]
 Letra: [Inspiracao dos meus sonhos]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Banda Cheiro de Amor]
@@ -6037,7 +6037,7 @@ Artista: [Banda Cheiro De Amor]
 Codigo: [862]
 Titulo [ABRE CORAcAO]
 Letra: [Meu amor, estou tao sozinha]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Banda Cheiro De Amor]
@@ -6310,7 +6310,7 @@ Artista: [Banda Mel ]
 Codigo: [901]
 Titulo [CRENcA E FE]
 Letra: [Vou dar a volta no mundo eu vou]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Banda Mel ]
@@ -6338,7 +6338,7 @@ Artista: [Banda Rara]
 Codigo: [905]
 Titulo [HIP HOP]
 Letra: [Olhe bem, preste atencao]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Banda Rara]
@@ -6443,7 +6443,7 @@ Artista: [Banda Uo]
 Codigo: [920]
 Titulo [FAZ UO]
 Letra: [Hoje eu acordei danado com fogo ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Banda Uo]
@@ -6506,7 +6506,7 @@ Artista: [Barao Vermelho]
 Codigo: [929]
 Titulo [BETE BALANcO]
 Letra: [Pode seguir a tua estrela o teu brinquedo]
-Vezes escutada: [0]
+Vezes escutada: [1]
 ===========================
 
 Artista: [Barao Vermelho]
@@ -6520,14 +6520,14 @@ Artista: [Barao Vermelho]
 Codigo: [931]
 Titulo [SORTE E AZAR]
 Letra: [Tudo e questao de obedecer ao instinto]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Barao Vermelho]
 Codigo: [932]
 Titulo [O POETA ESTA VIVO]
 Letra: [Baby compra o jornal e vem ver o sol]
-Vezes escutada: [0]
+Vezes escutada: [1]
 ===========================
 
 Artista: [Barao Vermelho]
@@ -6639,7 +6639,7 @@ Artista: [Barbra Streisand e  Barry Gibb]
 Codigo: [948]
 Titulo [GUILTY]
 Letra: [Shadows falling baby we stand alone ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Barbra Streisand e  Barry Gibb]
@@ -6709,7 +6709,7 @@ Artista: [Barry Manilow]
 Codigo: [958]
 Titulo [CAN T SMILE WITHOUT YOU]
 Letra: [You know I can t smile without you ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Barry Manilow]
@@ -6793,7 +6793,7 @@ Artista: [Beach Boys]
 Codigo: [970]
 Titulo [GOOD VIBRATION]
 Letra: [I, I love the colorful clothes she wears ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Beach Boys]
@@ -6842,7 +6842,7 @@ Artista: [Beatles]
 Codigo: [977]
 Titulo [FREE AS A BIRD]
 Letra: [Free ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Beatles]
@@ -6933,7 +6933,7 @@ Artista: [Beatles]
 Codigo: [990]
 Titulo [HELP]
 Letra: [Help I need somebody]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Beatles]
@@ -6975,7 +6975,7 @@ Artista: [Beatles]
 Codigo: [996]
 Titulo [OBLADI OBLADA]
 Letra: [Desmond has a barrow in the]
-Vezes escutada: [2]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Beatles]
@@ -7094,7 +7094,7 @@ Artista: [Beatles (The)]
 Codigo: [1013]
 Titulo [PAPERBACK WRITER]
 Letra: [Paperback writer writer writer Dear sir or madam]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Beatles (The)]
@@ -7206,7 +7206,7 @@ Artista: [Bee Gees]
 Codigo: [1029]
 Titulo [I CAN T SEE NOBODY]
 Letra: [I walk the lonely streets]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Bee Gees]
@@ -7248,7 +7248,7 @@ Artista: [Bee Gees]
 Codigo: [1035]
 Titulo [MASSACHUSETTS]
 Letra: [Feel I m going back to Massachusetts ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Bee Gees]
@@ -7381,7 +7381,7 @@ Artista: [Belchior]
 Codigo: [1054]
 Titulo [CORAcAO SELVAGEM]
 Letra: [Meu bem guarde uma frase pra mim]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Belchior]
@@ -7451,7 +7451,7 @@ Artista: [Belo]
 Codigo: [1064]
 Titulo [NADA VAI SEPARAR]
 Letra: [De manha sem te ver sinto um vazio em]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Belo]
@@ -7535,7 +7535,7 @@ Artista: [Belo]
 Codigo: [1076]
 Titulo [DESAFIO]
 Letra: [Ja virou desafio me apossar ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Belo]
@@ -7647,7 +7647,7 @@ Artista: [Beniamino Gigli]
 Codigo: [1092]
 Titulo [TORNA A SURRIENTO]
 Letra: [Vide  o mare quant e bello]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Benito De Paula]
@@ -7906,7 +7906,7 @@ Artista: [Beth Lamas]
 Codigo: [1129]
 Titulo [FAMA]
 Letra: [Money no bolso e tudo que eu quero ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Betinho  ]
@@ -8018,7 +8018,7 @@ Artista: [Beyonce]
 Codigo: [1145]
 Titulo [ME MYSELF AND I]
 Letra: [I can t believe]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Beyonce]
@@ -8067,7 +8067,7 @@ Artista: [Beyonce]
 Codigo: [1152]
 Titulo [XO]
 Letra: [Your love is bright as ever even in the shadows]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Beyonce]
@@ -8088,14 +8088,14 @@ Artista: [Beyonce e Jay Z]
 Codigo: [1155]
 Titulo [CRAZY IN LOVE]
 Letra: [Oh oh oh  I look and stare so deep in you eyes]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Bezerra da Silva]
 Codigo: [1156]
 Titulo [DEFUNTO CAGUETE]
 Letra: [Mas e que eu fui num velorio]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Bezerra da Silva]
@@ -8193,7 +8193,7 @@ Artista: [Bill Halley e  The Comets]
 Codigo: [1170]
 Titulo [ROCK AROUND THE CLOCK]
 Letra: [One, two, three o clock, four o clok, ro ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Bill Medley e  J.Warnes]
@@ -8494,14 +8494,14 @@ Artista: [Black Sabbath]
 Codigo: [1213]
 Titulo [IRON MAN]
 Letra: [Has he lost his mind]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Blind Melon]
 Codigo: [1214]
 Titulo [NO RAIN]
 Letra: [Uh uh uh uh uh  All I can say is that my]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Blink 182]
@@ -8648,7 +8648,7 @@ Artista: [BoA]
 Codigo: [1235]
 Titulo [MAMORITAI  WHITE WISHES ]
 Letra: [Kore de owari soh omohte ita tooi ano]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Bob Dylan]
@@ -8879,7 +8879,7 @@ Artista: [Bon Jovi]
 Codigo: [1268]
 Titulo [WANTED DEAD OR ALIVE]
 Letra: [It s all the same only the names will change]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Bon Jovi]
@@ -8942,7 +8942,7 @@ Artista: [Bonde Do Tigrao]
 Codigo: [1277]
 Titulo [CEROL NA MAO]
 Letra: [Quer dancar quer dancar o Tigrao vai te ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Bonde Do Tigrao]
@@ -8963,7 +8963,7 @@ Artista: [Bonnie Tyler]
 Codigo: [1280]
 Titulo [TOTAL ECLIPSE OF THE HEART]
 Letra: [Turn around ]
-Vezes escutada: [3]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Bonnie Tyler]
@@ -9145,7 +9145,7 @@ Artista: [Britney Spears]
 Codigo: [1306]
 Titulo [I M A SLAVE 4 U]
 Letra: [All you people look at me like I m a little girl]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Britney Spears]
@@ -9180,7 +9180,7 @@ Artista: [Britney Spears]
 Codigo: [1311]
 Titulo [SOMETIMES]
 Letra: [You tell me you re in love with me]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Britney Spears]
@@ -9285,7 +9285,7 @@ Artista: [Bruce Springsteen]
 Codigo: [1326]
 Titulo [DANCING IN THE DARK]
 Letra: [I get up in the evening]
-Vezes escutada: [0]
+Vezes escutada: [1]
 ===========================
 
 Artista: [Bruce Springsteen]
@@ -9726,7 +9726,7 @@ Artista: [Bruno e Marrone]
 Codigo: [1389]
 Titulo [VIDA VAZIA]
 Letra: [Depois que voce foi embora ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Bruno e Marrone]
@@ -9922,7 +9922,7 @@ Artista: [Bruno e Marrone ]
 Codigo: [1417]
 Titulo [FLASH BACK DE NOS DOIS ]
 Letra: [Mas se quiser pode rolar]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Bruno e Marrone E Calypso]
@@ -9936,7 +9936,7 @@ Artista: [Bruno e Marrone Edson e Hudson]
 Codigo: [1419]
 Titulo [AMOR DE PING PONG]
 Letra: [E esse amor de ping pong]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Bruno Mars]
@@ -10104,7 +10104,7 @@ Artista: [Byafra]
 Codigo: [1443]
 Titulo [HELENA]
 Letra: [Noite que se foi sem se quer dizer pra onde foi ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [BZ]
@@ -10419,7 +10419,7 @@ Artista: [Caetano Veloso]
 Codigo: [1488]
 Titulo [LUA E ESTRELA]
 Letra: [Menina do anel de lua e estrela]
-Vezes escutada: [0]
+Vezes escutada: [1]
 ===========================
 
 Artista: [Caetano Veloso]
@@ -10461,7 +10461,7 @@ Artista: [Caetano Veloso]
 Codigo: [1494]
 Titulo [SOY LOCO POR TI AMERICA]
 Letra: [Soy loco por ti America ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Caetano Veloso]
@@ -10510,7 +10510,7 @@ Artista: [Caetano Veloso]
 Codigo: [1501]
 Titulo [LUNA ROSSA]
 Letra: [La ari il ra la ari il ra Vaca distrattamente abbabdunato]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Caetano Veloso e Tom Ze e Gilberto Gil]
@@ -10825,7 +10825,7 @@ Artista: [Capital Inicial]
 Codigo: [1546]
 Titulo [O MUNDO]
 Letra: [Tchuru tchu  voce que ja esteve no ceu]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Capital Inicial]
@@ -10937,7 +10937,7 @@ Artista: [Capital Inicial]
 Codigo: [1562]
 Titulo [MAIS]
 Letra: [E sempre frio e tao estranho ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Capital Inicial]
@@ -11014,7 +11014,7 @@ Artista: [Carl Douglas]
 Codigo: [1573]
 Titulo [KUNG FU FIGHTING]
 Letra: [Oh oh oh oh]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Carl Perkins]
@@ -11112,14 +11112,14 @@ Artista: [Carlos Gonzaga]
 Codigo: [1587]
 Titulo [SERENO]
 Letra: [Sereno da madrugada caindo no meu ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Carlos Jose]
 Codigo: [1588]
 Titulo [ESMERALDA]
 Letra: [Vestida de noiva com veu e grinalda]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Carlos Jose]
@@ -11252,7 +11252,7 @@ Artista: [Carnaval]
 Codigo: [1607]
 Titulo [CORAcAO DE JACARE]
 Letra: [Trocaram o coracao da minha sogra]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Carnaval]
@@ -11322,7 +11322,7 @@ Artista: [Carol Song]
 Codigo: [1617]
 Titulo [SILVER BELLS]
 Letra: [City side walks busy side walks]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Carol Song]
@@ -11343,7 +11343,7 @@ Artista: [Carole King]
 Codigo: [1620]
 Titulo [IT S TOO LATE]
 Letra: [Stayed in bed all mornin  just to pass ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Carpenters]
@@ -11896,7 +11896,7 @@ Artista: [Cazuza]
 Codigo: [1699]
 Titulo [MAIOR ABANDONADO]
 Letra: [Eu to perdido, sem pai nem mae]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Cazuza]
@@ -11924,7 +11924,7 @@ Artista: [Cazuza]
 Codigo: [1703]
 Titulo [O TEMPO NAO PARA]
 Letra: [Desperto contra o sol sou forte ]
-Vezes escutada: [3]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Cazuza]
@@ -11952,7 +11952,7 @@ Artista: [Ce Ce Peniston]
 Codigo: [1707]
 Titulo [FINALLY]
 Letra: [Finally it has happened to me]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Ceceu Muniz]
@@ -11966,7 +11966,7 @@ Artista: [Ceceu Muniz]
 Codigo: [1709]
 Titulo [MOLEM MOLEM]
 Letra: [E o Ceceuzinho que chegou corpao de mola]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Ceceu Muniz]
@@ -12050,7 +12050,7 @@ Artista: [Celine Dion]
 Codigo: [1721]
 Titulo [A NEW DAY HAS COME (RADIO REMIX)]
 Letra: [A new day ohhh  I was waiting for so long]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Celine Dion]
@@ -12064,7 +12064,7 @@ Artista: [Celine Dion]
 Codigo: [1723]
 Titulo [IT S ALL COMING BACK TO ME NOW]
 Letra: [There were nights when the wind was so cold]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Celine Dion]
@@ -12190,7 +12190,7 @@ Artista: [Cesar Menotti e Fabiano]
 Codigo: [1741]
 Titulo [VEM ME AMAR]
 Letra: [Louco de saudade te liguei pra te fal]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Cesar Menotti e Fabiano]
@@ -12302,7 +12302,7 @@ Artista: [Cezar E Paulinho]
 Codigo: [1757]
 Titulo [CARMINHA]
 Letra: [Tarde da noite eu ja estava deitado]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Cezar e Paulinho]
@@ -12337,7 +12337,7 @@ Artista: [Cezar E Paulinho]
 Codigo: [1762]
 Titulo [NAO OLHE PRO MEU OLHAR]
 Letra: [Nao olhe pro meu olhar se for embora]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Cezar E Paulinho (Part. Daniel)]
@@ -12442,7 +12442,7 @@ Artista: [Charlie Brown Jr.]
 Codigo: [1777]
 Titulo [SENHOR DO TEMPO]
 Letra: [Eu nao sou senhor do tempo]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Charlie Brown Jr.]
@@ -12505,7 +12505,7 @@ Artista: [Charlie Brown Jr.]
 Codigo: [1786]
 Titulo [TUDO QUE ELA GOSTA DE ESCUTAR]
 Letra: [Essa e uma historia de amargar]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Charlie Brown Jr.]
@@ -12547,7 +12547,7 @@ Artista: [Charlie Brown Jr.]
 Codigo: [1792]
 Titulo [ME ENCONTRA]
 Letra: [Hoje eu vou sair para encontrar o amor]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Charlie Brown Jr. e Negra Li]
@@ -12610,7 +12610,7 @@ Artista: [Cheiro de Amor ]
 Codigo: [1801]
 Titulo [DIAS DE SOL ]
 Letra: [Dias de Sol]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Cheiro de Amor e Pablo]
@@ -13485,7 +13485,7 @@ Artista: [Chitaozinho E Xororo]
 Codigo: [1926]
 Titulo [SO QUEM AMOU DEMAIS]
 Letra: [Se ja doeu demais a falta desse amor]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Chitaozinho E Xororo]
@@ -13506,7 +13506,7 @@ Artista: [Chitaozinho E Xororo]
 Codigo: [1929]
 Titulo [PE NA ESTRADA]
 Letra: [Pe na estrada, la vamos nos outra vez]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Chitaozinho E Xororo]
@@ -13625,7 +13625,7 @@ Artista: [Chitaozinho E Xororo]
 Codigo: [1946]
 Titulo [ENCONTRO CASUAL]
 Letra: [Boa noite um sorriso um encontro ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Chitaozinho E Xororo]
@@ -13800,7 +13800,7 @@ Artista: [Chris Thompson]
 Codigo: [1971]
 Titulo [IF YOU REMEMBER ME]
 Letra: [When you remember me If you remember m]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Christian e Cristiano]
@@ -13849,7 +13849,7 @@ Artista: [Christian E Ralf]
 Codigo: [1978]
 Titulo [VIRA VIROU]
 Letra: [Por causa de voce]
-Vezes escutada: [0]
+Vezes escutada: [1]
 ===========================
 
 Artista: [Christian E Ralf]
@@ -13989,7 +13989,7 @@ Artista: [Christopher Cross]
 Codigo: [1998]
 Titulo [NEVER BE THE SAME]
 Letra: [It was good for me was good for you]
-Vezes escutada: [2]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Christopher Cross]
@@ -14094,7 +14094,7 @@ Artista: [Cidade Negra]
 Codigo: [2013]
 Titulo [ONDE VOCE MORA?]
 Letra: [Amor igual ao teu eu nunca mais terei]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Cidade Negra]
@@ -14549,7 +14549,7 @@ Artista: [Claudia Leitte e Sergio Mendes]
 Codigo: [2078]
 Titulo [MAGALENHA]
 Letra: [Vem magalenha rojao traz a lenha pro]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Claudia Leitte e Thiaguinho]
@@ -14577,7 +14577,7 @@ Artista: [Claudia Telles]
 Codigo: [2082]
 Titulo [A NOITE VAI CHEGAR]
 Letra: [A noite vai chegar ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Claudia Telles]
@@ -14731,7 +14731,7 @@ Artista: [Cleiton e Camargo]
 Codigo: [2104]
 Titulo [ONDE ESTA]
 Letra: [Preciso de alguem pra somar e nao]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Cleiton E Camargo]
@@ -14752,14 +14752,14 @@ Artista: [Cleiton E Camargo]
 Codigo: [2107]
 Titulo [NA HORA DE AMAR]
 Letra: [Seu olhar sempre esta muito longe]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Cleiton E Camargo]
 Codigo: [2108]
 Titulo [OUTRA CHANCE]
 Letra: [Se voce esta ai sozinha em sua casa]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Cleiton E Camargo]
@@ -14773,7 +14773,7 @@ Artista: [Cliff Richard]
 Codigo: [2110]
 Titulo [WE DON T TALK ANYMORE]
 Letra: [Used to think that life was sweet ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Cliff Richard]
@@ -14794,7 +14794,7 @@ Artista: [Club Nouveau]
 Codigo: [2113]
 Titulo [LEAN ON ME]
 Letra: [Sometimes in our lives we all have pain]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [CNCO e Little Mix]
@@ -14885,7 +14885,7 @@ Artista: [Coldplay]
 Codigo: [2126]
 Titulo [FIX YOU]
 Letra: [When you try your best but you don t succeed]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Coldplay]
@@ -15004,7 +15004,7 @@ Artista: [Companhia Do Calypso]
 Codigo: [2143]
 Titulo [FALTOU CORAGEM]
 Letra: [Nem disse adeus]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Companhia Do Calypso]
@@ -15333,7 +15333,7 @@ Artista: [Cranberries (The)]
 Codigo: [2190]
 Titulo [SALVATION]
 Letra: [To all those people doing lines]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Crash Test Dummies]
@@ -15487,7 +15487,7 @@ Artista: [Cristina Mel]
 Codigo: [2212]
 Titulo [A MAO DO MESTRE]
 Letra: [No olhar de um irmao vejo a mao do Me]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Cristina Mel]
@@ -15739,14 +15739,14 @@ Artista: [Dado Dolabella]
 Codigo: [2248]
 Titulo [VEM NI MIM]
 Letra: [Quando eu vejo uma mulher ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Daft Punk e Pharrell Williams]
 Codigo: [2249]
 Titulo [GET LUCK]
 Letra: [Like the legend of the phoenix]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Daiji Man Brothers Band]
@@ -15816,7 +15816,7 @@ Artista: [Damares]
 Codigo: [2259]
 Titulo [A BATALHA DO ARCANJO]
 Letra: [Irmao ha quanto tempo voce ora]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Damares]
@@ -15928,7 +15928,7 @@ Artista: [Daniel]
 Codigo: [2275]
 Titulo [AMIGA]
 Letra: [Voce nao aceita que eu te chame de a]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Daniel]
@@ -16243,7 +16243,7 @@ Artista: [Daniela Mercury]
 Codigo: [2320]
 Titulo [SWING DA COR]
 Letra: [Nao, nao me abandone]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Daniela Mercury]
@@ -16726,14 +16726,14 @@ Artista: [Deen]
 Codigo: [2389]
 Titulo [KONO MAMA KIMI DAKEO UBAI SARITAI]
 Letra: [Shizukani tatasumu matinami ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Deen]
 Codigo: [2390]
 Titulo [TSUBASA O HIROGETE]
 Letra: [Natsu no otoshi mono kimi to sugoshi]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Deen]
@@ -16768,7 +16768,7 @@ Artista: [Degradee]
 Codigo: [2395]
 Titulo [MAIS QUE UM SONHADOR]
 Letra: [Quando a noite vem comeco a pensar]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Delta Goodrem]
@@ -17174,7 +17174,7 @@ Artista: [Diante do Trono]
 Codigo: [2453]
 Titulo [TU ES REI]
 Letra: [Tu es Rei e nao ha outro]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Diante do Trono]
@@ -17272,7 +17272,7 @@ Artista: [Diante do Trono]
 Codigo: [2467]
 Titulo [ESPERANcA]
 Letra: [Quando estou so]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Diante do Trono]
@@ -17328,7 +17328,7 @@ Artista: [Dick Farney]
 Codigo: [2475]
 Titulo [NICK BAR]
 Letra: [Foi neste bar pequenino onde encontre]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Dick Farney]
@@ -17566,7 +17566,7 @@ Artista: [Disney Enrolados e Sylvia Salustti e Raphael Rossato]
 Codigo: [2509]
 Titulo [VEJO ENFIM A LUZ BRILHAR]
 Letra: [Tantos dias olhando das janelas tantos anos presa]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Disney Frozen e G.Guimaraes H.Zeitoune G.Porto]
@@ -18035,7 +18035,7 @@ Artista: [Donato E Estefano]
 Codigo: [2576]
 Titulo [MI DIOS Y MI CRUZ]
 Letra: [Uh uh]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Donizete]
@@ -18126,7 +18126,7 @@ Artista: [Doris Day]
 Codigo: [2589]
 Titulo [QUE SERA SERA]
 Letra: [When I was just a little girl]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Doris Monteiro]
@@ -18196,7 +18196,7 @@ Artista: [Double You]
 Codigo: [2599]
 Titulo [SHE S BEAUTIFUL]
 Letra: [Tell me baby what you are going to do]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Double You]
@@ -18322,7 +18322,7 @@ Artista: [Dudu Nobre]
 Codigo: [2617]
 Titulo [NO MEXE MEXE NO BOLE BOLE]
 Letra: [To querendo esse seu amor ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Dudu Nobre]
@@ -18413,7 +18413,7 @@ Artista: [E O Tchan]
 Codigo: [2630]
 Titulo [DENGO DE MULHERES]
 Letra: [Toda moca tem um dengo]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [E O Tchan]
@@ -19253,7 +19253,7 @@ Artista: [Elba Ramalho]
 Codigo: [2750]
 Titulo [MINHA VIDA E TE AMAR]
 Letra: [Minha lua e tua estrada minha ceia e teu sabor]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Elba Ramalho]
@@ -19358,7 +19358,7 @@ Artista: [Eliana  ]
 Codigo: [2765]
 Titulo [PRIMAVERA]
 Letra: [Respiramos alegria e a primavera ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Eliana De Lima]
@@ -19764,7 +19764,7 @@ Artista: [Ellie Goulding]
 Codigo: [2823]
 Titulo [HOW LONG WILL I LOVE YOU]
 Letra: [How long will I love you]
-Vezes escutada: [0]
+Vezes escutada: [1]
 ===========================
 
 Artista: [Ellie Goulding]
@@ -19813,7 +19813,7 @@ Artista: [Elton John]
 Codigo: [2830]
 Titulo [ROCKET MAN]
 Letra: [She packed my bags last night preflight ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Elton John]
@@ -20051,7 +20051,7 @@ Artista: [Elvis Presley]
 Codigo: [2864]
 Titulo [IT S NOW OR NEVER]
 Letra: [It s now or never come hold me tight]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Elvis Presley]
@@ -20436,7 +20436,7 @@ Artista: [Engenheiros do Hawaii]
 Codigo: [2919]
 Titulo [PIANO BAR]
 Letra: [O que voce me pede eu nao posso fazer]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Engenheiros do Hawaii]
@@ -20618,7 +20618,7 @@ Artista: [Erasure]
 Codigo: [2945]
 Titulo [A LITTLE RESPECT]
 Letra: [I try to discover ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Erasure]
@@ -20961,7 +20961,7 @@ Artista: [Exaltasamba]
 Codigo: [2994]
 Titulo [SE LIGA]
 Letra: [Ja faz um tempo que eu venho te falan]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Exaltasamba]
@@ -21010,7 +21010,7 @@ Artista: [Exaltasamba]
 Codigo: [3001]
 Titulo [TCHAU E BENcA]
 Letra: [Eu bem que te falei por favor nao brinque]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Exaltasamba]
@@ -21269,7 +21269,7 @@ Artista: [Eyshila]
 Codigo: [3038]
 Titulo [FALA COMIGO]
 Letra: [Fala comigo fala Senhor]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Eyshila]
@@ -21479,7 +21479,7 @@ Artista: [Fabio Junior]
 Codigo: [3068]
 Titulo [SENTA AQUI]
 Letra: [Senta aqui ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Fabio Junior]
@@ -21591,14 +21591,14 @@ Artista: [Fafa De Belem]
 Codigo: [3084]
 Titulo [AGUAS PASSADAS]
 Letra: [Eu sempre disse a mim mesma que aguas]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Fafa de Belem]
 Codigo: [3085]
 Titulo [PAUAPIXUNA]
 Letra: [Uma cantiga de amor se mexeu]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Fafa de Belem]
@@ -21829,7 +21829,7 @@ Artista: [Fagner]
 Codigo: [3118]
 Titulo [QUEM ME LEVARA SOU EU]
 Letra: [Amigos a gente encontra o mundo nao ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Fagner]
@@ -22214,7 +22214,7 @@ Artista: [Fernanda Brum]
 Codigo: [3173]
 Titulo [ESPIRITO SANTO]
 Letra: [Espirito Santo ore por mim]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Fernanda Brum]
@@ -22445,7 +22445,7 @@ Artista: [Fernandinho]
 Codigo: [3206]
 Titulo [SARA ME]
 Letra: [O mesmo Jesus que andou em Jerusalem]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Fernandinho]
@@ -22473,7 +22473,7 @@ Artista: [Fernandinho]
 Codigo: [3210]
 Titulo [TODAS AS COISAS]
 Letra: [Eu sei que sempre estas comigo Senhor]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Fernandinho]
@@ -22816,7 +22816,7 @@ Artista: [Fino Coletivo ]
 Codigo: [3259]
 Titulo [UMA RAIZ UMA FLOR ]
 Letra: [Nao diga que as estrelas estao mortas]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Fiuk]
@@ -23138,7 +23138,7 @@ Artista: [Franco Levine]
 Codigo: [3305]
 Titulo [EU TO AQUI]
 Letra: [Senta aqui]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Frank Aguiar]
@@ -23516,7 +23516,7 @@ Artista: [Fruto Sagrado]
 Codigo: [3359]
 Titulo [LOBO MAU]
 Letra: [Lobo na pele de cordeiro e lobo mau]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Fruto Sagrado]
@@ -23824,7 +23824,7 @@ Artista: [Fuse Akira]
 Codigo: [3403]
 Titulo [TSUMIKI NO HEYA]
 Letra: [Itsuno manika kimito kurashi ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Fuse Akira]
@@ -24440,7 +24440,7 @@ Artista: [George Benson]
 Codigo: [3491]
 Titulo [IN YOUR EYES]
 Letra: [I think I finally know you ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [George Benson ]
@@ -24678,7 +24678,7 @@ Artista: [Gian E Giovani]
 Codigo: [3525]
 Titulo [UM, DOIS, TRES]
 Letra: [De uma cachaca boa nao abro mao]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Gian E Giovani]
@@ -24867,7 +24867,7 @@ Artista: [Gian E Giovani]
 Codigo: [3552]
 Titulo [PEAO DE VITRINE]
 Letra: [Eu sou peao vem ca me da um abraco ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Gianni Morandi]
@@ -25931,7 +25931,7 @@ Artista: [Grupo Pirraca]
 Codigo: [3704]
 Titulo [INIGUALAVEL PAIXAO]
 Letra: [Es inigualavel na arte de amar]
-Vezes escutada: [0]
+Vezes escutada: [1]
 ===========================
 
 Artista: [Grupo Pirraca]
@@ -26449,7 +26449,7 @@ Artista: [Guilherme e Santiago]
 Codigo: [3778]
 Titulo [E DAI]
 Letra: [E dai]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Guilherme e Santiago]
@@ -26463,7 +26463,7 @@ Artista: [Guilherme e Santiago]
 Codigo: [3780]
 Titulo [NA HORA CERTA]
 Letra: [Na hora certa ainda vou te encontrar]
-Vezes escutada: [2]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Guilherme e Santiago]
@@ -27184,7 +27184,7 @@ Artista: [Harmony Cats]
 Codigo: [3883]
 Titulo [AMIGO E]
 Letra: [E amigo e um passarinho que vem te]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Harmony Cats]
@@ -27660,7 +27660,7 @@ Artista: [High School Musical]
 Codigo: [3951]
 Titulo [YOU ARE THE MUSIC IN ME]
 Letra: [Na na na na na na na na yeah]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [High School Musical]
@@ -27975,7 +27975,7 @@ Artista: [Horiuchi Takao]
 Codigo: [3996]
 Titulo [AISU BEKI OTOKO TACHI]
 Letra: [Hikage sodachi no kono ore ga]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Horiuchi Takao]
@@ -29200,7 +29200,7 @@ Artista: [Isabella Taviani]
 Codigo: [4171]
 Titulo [ESTRATEGISTA]
 Letra: [Eu nao sei por quanto tempo ainda vai durar]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Isabella Taviani]
@@ -29214,7 +29214,7 @@ Artista: [Isabella Taviani ]
 Codigo: [4173]
 Titulo [DIGA SIM PRA MIM ]
 Letra: [Eu pensei em comprar algumas flores]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Ishiara Yujiro]
@@ -29270,7 +29270,7 @@ Artista: [Ishihara Junko]
 Codigo: [4181]
 Titulo [KIZUNA ZAKE]
 Letra: [Yumemo youdessu anatato futari ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Ishihara Junko]
@@ -29431,7 +29431,7 @@ Artista: [Ishikawa Sayuri]
 Codigo: [4204]
 Titulo [OSAKA NO ONNA]
 Letra: [Osake nomanakya ii hito nano ni]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Ishikawa Sayuri]
@@ -30313,7 +30313,7 @@ Artista: [Ivete Sangalo]
 Codigo: [4330]
 Titulo [CANIBAL]
 Letra: [Morava numa ilha perdida e deserta ]
-Vezes escutada: [0]
+Vezes escutada: [1]
 ===========================
 
 Artista: [Ivete Sangalo]
@@ -30383,7 +30383,7 @@ Artista: [Ivete Sangalo]
 Codigo: [4340]
 Titulo [FLOR DO REGGAE]
 Letra: [Um brilho de amor chegou na ilha ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Ivete Sangalo]
@@ -31020,7 +31020,7 @@ Artista: [James Taylor]
 Codigo: [4431]
 Titulo [SWEET BABY JAMES]
 Letra: [There is a young cowboy he lives on the ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Jamie Cullum ]
@@ -31237,7 +31237,7 @@ Artista: [Janet Jackson]
 Codigo: [4462]
 Titulo [AGAIN]
 Letra: [I heard from a friend today ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Janet Jackson]
@@ -32770,7 +32770,7 @@ Artista: [Johnny Rivers]
 Codigo: [4681]
 Titulo [SUMMER RAIN]
 Letra: [Summer rain taps at my window]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Johnny Rivers]

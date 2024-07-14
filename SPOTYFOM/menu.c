@@ -91,8 +91,8 @@ void desenhaTelaInicial(struct TELA *tela, float *altura, float *largura){
 
 void desenhaMenu(struct TELA *tela, float largura, Playlist *playlist)
 {
-    int header_alt, header_larg, cont_alt, cont_larg, foot_alt, foot_larg, maximoR, maximoP;
-    int i, tamanhoLinhaF = 18, tamanhoLinhaP = 18;
+    int header_alt, header_larg, menu_alt, menu_larg, cont_alt, cont_larg, foot_alt, foot_larg, maximoR, maximoP;
+    int i, tamanhoColunaF = 18, tamanhoColunaP = 18, linhaR = 8, linhaP;
     char nomeAntP[300], nomeAntF[300];
     DescFila *auxFila = playlist->primeiroFila;
     DescPilha *auxPilha = playlist->primeiroPilha;
@@ -101,7 +101,9 @@ void desenhaMenu(struct TELA *tela, float largura, Playlist *playlist)
 
     attron(COLOR_PAIR(1)); // Ativa o par de cores número 1
 
+    //coleto a largura e altura das janelas
     getmaxyx(tela->header, header_alt, header_larg);
+    getmaxyx(tela->menu, menu_alt, menu_larg);
     getmaxyx(tela->content, cont_alt, cont_larg);
     getmaxyx(tela->footer, foot_alt, foot_larg);
 
@@ -111,65 +113,82 @@ void desenhaMenu(struct TELA *tela, float largura, Playlist *playlist)
     wattron(tela->header, A_BLINK);
 
     //MENU
-    mvwprintw(tela->menu, 4,  ((largura/2)-strlen("----MENU----"))/2, "----MENU----");
-    mvwprintw(tela->menu, 7,  ((largura/2)-strlen("2     ADICIONAR PLAYLIST"))/2, "1     EXECUTAR");
-    mvwprintw(tela->menu, 8,  ((largura/2)-strlen("2     ADICIONAR PLAYLIST"))/2, "2     ADICIONAR PLAYLIST");
-    mvwprintw(tela->menu, 9,  ((largura/2)-strlen("2     ADICIONAR PLAYLIST"))/2, "3     BUSCAR MUSICA");
-    mvwprintw(tela->menu, 10,  ((largura/2)-strlen("2     ADICIONAR PLAYLIST"))/2, "4     IMPRIMIR");
-    mvwprintw(tela->menu, 11,  ((largura/2)-strlen("2     ADICIONAR PLAYLIST"))/2, "5     RELATORIO");
-    mvwprintw(tela->menu, 12, ((largura/2)-strlen("2     ADICIONAR PLAYLIST"))/2, "6     BACKUP");
-    mvwprintw(tela->menu, 13, ((largura/2)-strlen("2     ADICIONAR PLAYLIST"))/2, "0     ENCERRAR");
+    mvwprintw(tela->menu, menu_alt/4,  ((largura/2)-strlen("__________MENU__________"))/2, "__________MENU__________");
+    mvwprintw(tela->menu, menu_alt/4+2,  ((largura/2)-strlen("2     ADICIONAR PLAYLIST"))/2, "1     EXECUTAR");
+    mvwprintw(tela->menu, menu_alt/4+3,  ((largura/2)-strlen("2     ADICIONAR PLAYLIST"))/2, "2     ADICIONAR PLAYLIST");
+    mvwprintw(tela->menu, menu_alt/4+4,  ((largura/2)-strlen("2     ADICIONAR PLAYLIST"))/2, "3     IMPRIMIR");
+    mvwprintw(tela->menu, menu_alt/4+5,  ((largura/2)-strlen("2     ADICIONAR PLAYLIST"))/2, "4     RELATORIO");
+    mvwprintw(tela->menu, menu_alt/4+6,  ((largura/2)-strlen("2     ADICIONAR PLAYLIST"))/2, "5     BUSCA");
+    mvwprintw(tela->menu, menu_alt/4+7, ((largura/2)-strlen("2     ADICIONAR PLAYLIST"))/2, "6     BACKUP");
+    mvwprintw(tela->menu, menu_alt/4+8, ((largura/2)-strlen("2     ADICIONAR PLAYLIST"))/2, "0     ENCERRAR");
 
         //CONTENT
         mvwprintw(tela->content, 2, 35, "=== PLAYLISTS ===");
 
         mvwprintw(tela->content, 4, 34, "--------------------");
 
-        mvwprintw(tela->content, 5, 35, "PLAYLIST RANDOMICA");
-        mvwprintw(tela->content, 7,  35/2, "|-----------------------------------------------------|");
-        //se nao existir playlists aleatorias:
-            if(playlist->primeiroFila == NULL){
-                mvwprintw(tela->content, 8, 35/2, "Sem playlists adicionadas");
-            }
-        //caso exista:
-            else{
-                while(auxFila != NULL){
-
-                    wattron(tela->content, A_REVERSE | A_BOLD);//REVERTE AS CORES DO FUNDO COM O TEXTO E DEIXA EM NEGRITO
-                    mvwprintw(tela->content, 8, tamanhoLinhaF, "%s-%d", auxFila->nome, auxFila->tamanho);
-                    wattroff(tela->content, A_REVERSE | A_BOLD); // DESLIGA OS EFEITOS
-
-                    //copio o nome anterior para saber o espaçamento
-                        snprintf(nomeAntF, sizeof(nomeAntF), "%s-%d", auxFila->nome, auxFila->tamanho);
-                        tamanhoLinhaF = tamanhoLinhaF + strlen(nomeAntF) + 2;
-                    auxFila = auxFila->prox;
+        //PLAYLIST RANDOM
+            mvwprintw(tela->content, 5, 35, "PLAYLIST RANDOMICA");
+            mvwprintw(tela->content, 7,  35/2, "|-----------------------------------------------------|");
+            //se nao existir playlists aleatorias:
+                if(playlist->primeiroFila == NULL){
+                    mvwprintw(tela->content, 8, 35/2, "Sem playlists adicionadas");
                 }
-            }
+            //caso exista:
+                else{
+                    while(auxFila != NULL){
+                        
+                        //se a coluna estourar o layout, preciso aumentar uma linha pra baixo
+                            if(tamanhoColunaF >= (35/2)+strlen("|-----------------------------------------------------|")){
+                                linhaR+=2;
+                                tamanhoColunaF = 18;
+                        }
 
-        mvwprintw(tela->content, 10, 35/2, "|-----------------------------------------------------|");
+                        wattron(tela->content, A_REVERSE | A_BOLD);//REVERTE AS CORES DO FUNDO COM O TEXTO E DEIXA EM NEGRITO
+                        mvwprintw(tela->content, linhaR, tamanhoColunaF, "%s-%d", auxFila->nome, auxFila->tamanho);
+                        wattroff(tela->content, A_REVERSE | A_BOLD); // DESLIGA OS EFEITOS
 
-
-        mvwprintw(tela->content, 12, 34, "--------------------");
-        
-        mvwprintw(tela->content, 13, 35, "PLAYLIST PESSOAL");
-        mvwprintw(tela->content, 15, 35/2, "|-----------------------------------------------------|");
-        //se nao existir playlists aleatorias:
-            if(playlist->primeiroPilha== NULL){
-                mvwprintw(tela->content, 16, 35/2, "Sem playlists adicionadas");
-            }
-        //caso exista:
-            else{
-                while(auxPilha != NULL){
-                    
-                    mvwprintw(tela->content, 16, tamanhoLinhaP, "%s-%d", auxPilha->nome, auxPilha->tamanho);
-                    i++;
-                    //copio o nome anterior para saber o espaçamento
-                        snprintf(nomeAntP, sizeof(nomeAntP), "%s-%d", auxPilha->nome, auxPilha->tamanho);
-                        tamanhoLinhaP = tamanhoLinhaP + strlen(nomeAntP) + 2;
-                    auxPilha = auxPilha->prox;
+                        
+                        //copio o nome anterior para saber o espaçamento
+                            snprintf(nomeAntF, sizeof(nomeAntF), "%s-%d", auxFila->nome, auxFila->tamanho);
+                            tamanhoColunaF = tamanhoColunaF + strlen(nomeAntF) + 2;
+                        auxFila = auxFila->prox;
+                    }
                 }
-            }
-        mvwprintw(tela->content, 18, 35/2, "|-----------------------------------------------------|");
+            linhaR+=2;
+            mvwprintw(tela->content, linhaR, 35/2, "|-----------------------------------------------------|");
+
+            linhaP = linhaR;
+            mvwprintw(tela->content, linhaP+2, 34, "--------------------");
+
+        //PLAYLIST PESSOAL  
+            mvwprintw(tela->content, linhaP+3, 35, "PLAYLIST PESSOAL");
+            mvwprintw(tela->content,  linhaP+4, 35/2, "|-----------------------------------------------------|");
+            //se nao existir playlists aleatorias:
+                if(playlist->primeiroPilha== NULL){
+                    //tamanho padrao da linha P = 12;
+                    mvwprintw(tela->content, linhaP+5, 35/2, "Sem playlists adicionadas");
+                }
+            //caso exista:
+                else{
+                    while(auxPilha != NULL){
+                        //se a coluna estourar o layout, preciso aumentar uma linha pra baixo
+                            if(tamanhoColunaP >= (35/2)+strlen("|-----------------------------------------------------|")){
+                                linhaP+=2;
+                                tamanhoColunaP = 18;
+                        }
+                        wattron(tela->content, A_REVERSE | A_BOLD);//REVERTE AS CORES DO FUNDO COM O TEXTO E DEIXA EM NEGRITO
+                        mvwprintw(tela->content, linhaP+5, tamanhoColunaP, "%s-%d", auxPilha->nome, auxPilha->tamanho);
+                        wattroff(tela->content, A_REVERSE | A_BOLD);
+
+                        //copio o nome anterior para saber o espaçamento
+                            snprintf(nomeAntP, sizeof(nomeAntP), "%s-%d", auxPilha->nome, auxPilha->tamanho);
+                            tamanhoColunaP = tamanhoColunaP + strlen(nomeAntP) + 2;
+                        auxPilha = auxPilha->prox;
+                    }
+                }
+            linhaP+=2;
+            mvwprintw(tela->content, linhaP+5, 35/2, "|-----------------------------------------------------|");
 
     //FOOTER
     mvwprintw(tela->footer, 1, largura/2, "AUTOR");
