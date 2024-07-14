@@ -1,4 +1,4 @@
-#include "./Arquivos-h/ImprimeExecucoes.h"
+#include "../Arquivos-h/ImprimeExecucoes.h"
 
 
 int ImprimePlaylistRandom(DescFila *playlistRandom) {

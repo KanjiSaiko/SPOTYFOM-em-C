@@ -1,5 +1,5 @@
 index:
-	gcc -o executavel *.c -lncurses -lpanel -lmenu
+	gcc -o executavel *.c ./NCurses/*.c -lncurses -lpanel -lmenu
 	
 	./executavel
 
