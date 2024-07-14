@@ -74,7 +74,7 @@ void desenhaTelaMusicas(float *altura, float *largura, struct TelaExec *TelaMusi
 }
 
 void desenhaMusicasRandom(float largura, float altura, struct TelaExec *TelaMusicas, DescFila *FilaCorreta){
-    
+    int max_lines = altura*0.85; // Máximo de linhas visíveis na janela de conteúdo
     int header_alt, header_larg, cont_alt, cont_larg, foot_alt, foot_larg;
     NodoFila *aux = FilaCorreta->head;
     int start_line = 0; // Linha inicial para rolagem
@@ -86,7 +86,7 @@ void desenhaMusicasRandom(float largura, float altura, struct TelaExec *TelaMusi
     getmaxyx(TelaMusicas->content, cont_alt, cont_larg);
     getmaxyx(TelaMusicas->footer, foot_alt, foot_larg);
 
-    int max_lines = cont_alt - 2; // Máximo de linhas visíveis na janela de conteúdo
+    
     
     //HEADER
         wattron(TelaMusicas->header, A_BLINK);
@@ -105,7 +105,7 @@ void desenhaMusicasRandom(float largura, float altura, struct TelaExec *TelaMusi
         mvwprintw(TelaMusicas->content, cont_alt / 3, (cont_larg - strlen("Playlist Vazia")) / 2, "Playlist Vazia");
     } else {
         int i = 0;
-        while (aux != NULL && i < start_line + 26) {
+        while (aux != NULL && i < start_line + cont_alt - 2) {
             if (i >= start_line) {
                 mvwprintw(TelaMusicas->content, 1 + (i - start_line), 1, "Musica: %s", aux->info->titulo);
             }
@@ -139,11 +139,11 @@ void desenhaMusicasRandom(float largura, float altura, struct TelaExec *TelaMusi
 
         // Limpar a janela de conteúdo antes de redesenhar
         werase(TelaMusicas->content);
-
+        box(TelaMusicas->content, 0, 0);
         // Reimprimir conteúdo atualizado
         int i = 0;
         aux = FilaCorreta->head;
-        while (aux != NULL && i < start_line + 26) {
+        while (aux != NULL && i < start_line + cont_alt - 2) {
             if (i >= start_line) {
                 mvwprintw(TelaMusicas->content, 1 + (i - start_line), 1, "Musica: %s", aux->info->titulo);
             }
@@ -165,10 +165,11 @@ void inicializa_ncurses() {
 }
 
 void desenhaMusicasPessoal(float largura, float altura, struct TelaExec *TelaMusicas, DescPilha *PilhaCorreta){
-    int max_lines = altura * 0.85 - 2; // Máximo de linhas visíveis na janela de conteúdo
+    int max_lines = altura * 0.85; // Máximo de linhas visíveis na janela de conteúdo
     int header_alt, header_larg, cont_alt, cont_larg, foot_alt, foot_larg;
     NodoLP *aux = PilhaCorreta->Topo;
     int start_line = 0; // Linha inicial para rolagem
+    int total_musics = 0; // Total de músicas na lista
     int i = 0, linhas;
     attron(COLOR_PAIR(1)); // Ativa o par de cores número 1
 
@@ -180,16 +181,25 @@ void desenhaMusicasPessoal(float largura, float altura, struct TelaExec *TelaMus
         mvwprintw(TelaMusicas->header, 1, (header_larg-strlen("Playlist Executada"))/2, "Playlist Executada");
         wattroff(TelaMusicas->header, A_BLINK);
 
-    //CONTENT
-    if(PilhaCorreta->Topo == NULL){
-        mvwprintw(TelaMusicas->content, cont_alt/3, (cont_larg-strlen("Playlist Vazia"))/2, "Playlist Vazia");
-    }
+    // Calcula o total de músicas
     while (aux != NULL) {
-        if (i >= start_line && i < start_line + max_lines) {
-            mvwprintw(TelaMusicas->content, 1 + (i - start_line), 1, "Musica: %s", aux->info->titulo);
-        }
+        total_musics++;
         aux = aux->prox;
-        i++;
+    }
+    aux = PilhaCorreta->Topo; // Reset aux to head
+
+    //CONTENT
+    if (total_musics == 0) {
+        mvwprintw(TelaMusicas->content, cont_alt / 3, (cont_larg - strlen("Playlist Vazia")) / 2, "Playlist Vazia");
+    } else {
+        int i = 0;
+        while (aux != NULL && i < start_line + cont_alt - 2) {
+            if (i >= start_line) {
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), 1, "Musica: %s", aux->info->titulo);
+            }
+            aux = aux->prox;
+            i++;
+        }
     }
 
 
@@ -203,22 +213,33 @@ void desenhaMusicasPessoal(float largura, float altura, struct TelaExec *TelaMus
     wrefresh(TelaMusicas->footer);
 
     MEVENT event;
+    keypad(stdscr, TRUE);
     while (1) {
         int ch = getch();
+
         if (ch == KEY_F(1)) {
             break; // Sai do loop ao pressionar F1
-        } 
-        else if (ch == KEY_UP) { // Tecla para cima
-            if (start_line > 0) {
-                start_line--;
-            }
-            desenhaMusicasPessoal(largura, altura, TelaMusicas, PilhaCorreta);
-        } 
-        else if (ch == KEY_DOWN) { // Tecla para baixo
-            if (start_line + max_lines < i) {
-                start_line++;
-            }
-            desenhaMusicasPessoal(largura, altura, TelaMusicas, PilhaCorreta);
+        } else if (ch == KEY_UP && start_line > 0) {
+            start_line--;
+        } else if (ch == KEY_DOWN && start_line + max_lines < total_musics) {
+            start_line++;
         }
+
+        // Limpar a janela de conteúdo antes de redesenhar
+        werase(TelaMusicas->content);
+        box(TelaMusicas->content, 0, 0);
+        // Reimprimir conteúdo atualizado
+        int i = 0;
+        aux = PilhaCorreta->Topo;
+        while (aux != NULL && i < start_line + cont_alt - 2) {
+            if (i >= start_line) {
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), 1, "Musica: %s", aux->info->titulo);
+            }
+            aux = aux->prox;
+            i++;
+        }
+
+        // Atualizar a janela após modificar
+        wrefresh(TelaMusicas->content);
     }
 }
