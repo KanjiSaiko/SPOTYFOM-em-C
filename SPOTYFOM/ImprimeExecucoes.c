@@ -128,21 +128,31 @@ void desenhaMusicasRandom(float largura, float altura, struct TelaExec *TelaMusi
     keypad(stdscr, TRUE);
     while (1) {
         int ch = getch();
+
         if (ch == KEY_F(1)) {
             break; // Sai do loop ao pressionar F1
-        } 
-        else if (ch == KEY_UP) { // Tecla para cima
-            if (start_line > 0) {
-                start_line--;
-                desenhaMusicasRandom(largura, altura, TelaMusicas, FilaCorreta);
-            }    
-        } 
-        else if (ch == KEY_DOWN) { // Tecla para baixo
-            if (start_line + max_lines < i) {
-                start_line++;
-                desenhaMusicasRandom(largura, altura, TelaMusicas, FilaCorreta);
-            } 
+        } else if (ch == KEY_UP && start_line > 0) {
+            start_line--;
+        } else if (ch == KEY_DOWN && start_line + max_lines < total_musics) {
+            start_line++;
         }
+
+        // Limpar a janela de conteúdo antes de redesenhar
+        werase(TelaMusicas->content);
+
+        // Reimprimir conteúdo atualizado
+        int i = 0;
+        aux = FilaCorreta->head;
+        while (aux != NULL && i < start_line + 26) {
+            if (i >= start_line) {
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), 1, "Musica: %s", aux->info->titulo);
+            }
+            aux = aux->prox;
+            i++;
+        }
+
+        // Atualizar a janela após modificar
+        wrefresh(TelaMusicas->content);
     }
 }
 
