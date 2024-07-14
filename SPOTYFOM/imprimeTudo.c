@@ -1,10 +1,12 @@
 #include "bibliotecas.h"
+#include "imprimeIMPRESSAO.h"
 
 
 void imprime(DescLE *descritor){
     NodoLP *aux = descritor->primeiro;
     char titulo[256], escolha;
     int loop = 1;
+    endwin();
     do{
         aux = descritor->primeiro;
         printf("Digite: [1] Imprimir pelo titulo || [2] para imprimir tudo || Qualquer outra tecla para voltar\n");
@@ -12,8 +14,9 @@ void imprime(DescLE *descritor){
         switch(escolha){
             case '1':
                 printf("Digite o titulo a ser buscado: ");
+                setbuf(stdin, NULL);
                 fgets(titulo, 256, stdin);
-                titulo[256 - 1] = '\0';
+                titulo[strlen(titulo) - 1] = '\0';
                 while(aux != NULL){
                     if(strcmp(aux->info->titulo, titulo) == 0){
                         printf("\n==========================\n");
@@ -28,9 +31,11 @@ void imprime(DescLE *descritor){
                     }
                     aux = aux->prox;
                 }
+                ImprimePorTitulo(aux);
                 break;
 
             case '2':
+                ImprimeMUSICAS(descritor);
                 while (aux != NULL){
                     printf("\n==========================\n");
                     printf("Titulo: %s\n", aux->info->titulo);
@@ -49,4 +54,5 @@ void imprime(DescLE *descritor){
         }
 
     }while(loop == 1);
+
 }
