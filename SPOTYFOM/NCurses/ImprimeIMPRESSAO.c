@@ -40,7 +40,7 @@ void desenhaImpressaoMusicas(float largura, float altura, struct TelaExec *TelaI
     
     //HEADER
         wattron(TelaImpressao->header, A_BLINK);
-        mvwprintw(TelaImpressao->header, 1, (header_larg-strlen("Musicas do Acervo"))/2, "Musicas do Acervo");
+        mvwprintw(TelaImpressao->header, 1, (header_larg-strlen("MUSICAS DO ACERVO"))/2, "MUSICAS DO ACERVO");
         wattroff(TelaImpressao->header, A_BLINK);
 
     // Calcula o total de músicas
@@ -59,8 +59,8 @@ void desenhaImpressaoMusicas(float largura, float altura, struct TelaExec *TelaI
             if (i >= start_line) {
                 mvwprintw(TelaImpressao->content, 1 + (i - start_line), 1, "Musica: %s", aux->info->titulo);
                 mvwprintw(TelaImpressao->content, 1 + (i - start_line), cont_larg/4, "Artista: %s", aux->info->artista);
-                mvwprintw(TelaImpressao->content, 1 + (i - start_line), cont_larg-110, "Letra: %s", aux->info->letra);
-                mvwprintw(TelaImpressao->content, 1 + (i - start_line), cont_larg-45, "Codigo: %d", aux->info->codigo);
+                mvwprintw(TelaImpressao->content, 1 + (i - start_line), cont_larg-95, "Letra: %s", aux->info->letra);
+                mvwprintw(TelaImpressao->content, 1 + (i - start_line), cont_larg-30, "Codigo: %d", aux->info->codigo);
                 mvwprintw(TelaImpressao->content, 1 + (i - start_line), cont_larg-strlen("Execucoes: ")-6, "Execucoes: %d", aux->info->execucoes);
             }
             aux = aux->prox;
@@ -70,7 +70,7 @@ void desenhaImpressaoMusicas(float largura, float altura, struct TelaExec *TelaI
 
 
     //FOOTER
-        mvwprintw(TelaImpressao->footer, 1, 1, "Press F1 to quit");
+        mvwprintw(TelaImpressao->footer, 1, 1, "Press KEY_DOWN/UP para passar conteudo ou F1 para sair");
         mvwprintw(TelaImpressao->footer, 1, (foot_larg-strlen("Henrique de Lima Bortolomiol"))/2, "Henrique de Lima Bortolomiol");
 
     // Atualização das janelas
@@ -101,8 +101,8 @@ void desenhaImpressaoMusicas(float largura, float altura, struct TelaExec *TelaI
             if (i >= start_line) {
                 mvwprintw(TelaImpressao->content, 1 + (i - start_line), 1, "Musica: %s", aux->info->titulo);
                 mvwprintw(TelaImpressao->content, 1 + (i - start_line), cont_larg/4, "Artista: %s", aux->info->artista);
-                mvwprintw(TelaImpressao->content, 1 + (i - start_line), cont_larg-110, "Letra: %s", aux->info->letra);
-                mvwprintw(TelaImpressao->content, 1 + (i - start_line), cont_larg-45, "Codigo: %d", aux->info->codigo);
+                mvwprintw(TelaImpressao->content, 1 + (i - start_line), cont_larg-95, "Letra: %s", aux->info->letra);
+                mvwprintw(TelaImpressao->content, 1 + (i - start_line), cont_larg-30, "Codigo: %d", aux->info->codigo);
                 mvwprintw(TelaImpressao->content, 1 + (i - start_line), cont_larg-strlen("Execucoes: ")-6, "Execucoes: %d", aux->info->execucoes);
             }
             aux = aux->prox;
@@ -152,7 +152,7 @@ void desenhaImpressaoTitulo(float largura, float altura, struct TelaExec *TelaIm
     
     //HEADER
         wattron(TelaImpressao->header, A_BLINK);
-        mvwprintw(TelaImpressao->header, 1, (header_larg-strlen("Musica"))/2, "Musica");
+        mvwprintw(TelaImpressao->header, 1, (header_larg-strlen("Musica"))/2, "MUSICA");
         wattroff(TelaImpressao->header, A_BLINK);
 
     //CONTENT
@@ -169,7 +169,7 @@ void desenhaImpressaoTitulo(float largura, float altura, struct TelaExec *TelaIm
             }
 
     //FOOTER
-        mvwprintw(TelaImpressao->footer, 1, 1, "Press F1 to quit");
+        mvwprintw(TelaImpressao->footer, 1, 1, "Pressione F1 para sair");
         mvwprintw(TelaImpressao->footer, 1, (foot_larg-strlen("Henrique de Lima Bortolomiol"))/2, "Henrique de Lima Bortolomiol");
 
     // Atualização das janelas
@@ -227,7 +227,7 @@ void desenhaImpressaoTitulo(float largura, float altura, struct TelaExec *TelaIm
         
         //HEADER
             wattron(TelaImpressao->header, A_BLINK);
-            mvwprintw(TelaImpressao->header, 1, (header_larg-strlen("Musica"))/2, "Musica");
+            mvwprintw(TelaImpressao->header, 1, (header_larg-strlen("Musica"))/2, "MUSICA");
             wattroff(TelaImpressao->header, A_BLINK);
 
         //CONTENT
@@ -244,7 +244,7 @@ void desenhaImpressaoTitulo(float largura, float altura, struct TelaExec *TelaIm
                 }
 
         //FOOTER
-            mvwprintw(TelaImpressao->footer, 1, 1, "Press F1 to quit");
+            mvwprintw(TelaImpressao->footer, 1, 1, "Pressione F1 para sair");
             mvwprintw(TelaImpressao->footer, 1, (foot_larg-strlen("Henrique de Lima Bortolomiol"))/2, "Henrique de Lima Bortolomiol");
 
         // Atualização das janelas

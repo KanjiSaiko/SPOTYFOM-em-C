@@ -1,19 +1,19 @@
 index:
-	gcc -o executavel *.c ./NCurses/*.c -lncurses -lpanel -lmenu
+	gcc -o SPOTYFOM *.c ./NCurses/*.c -lncurses -lpanel -lmenu
 	
-	./executavel
+	./SPOTYFOM
 
 testes:
 	@if [ -f executavel ]; then \
 		rm executavel; \
 	fi
 	
-	gcc -o executavel *.c -g -lncurses -lpanel -lmenu
-	gdb ./executavel
+	gcc -o SPOTYFOM *.c ./NCurses/*.c -g -lncurses -lpanel -lmenu
+	gdb ./SPOTYFOM
 
 clear:
-	@if [ -f executavel ]; then \
-		rm executavel; \
+	@if [ -f SPOTYFOM ]; then \
+		rm SPOTYFOM; \
 	fi
 	clear
 

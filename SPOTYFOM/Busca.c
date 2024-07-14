@@ -30,7 +30,8 @@ Musica *Busca(DescLE *descritor){
         }
         aux = aux->prox;
     }
-    ImprimePorBusca(aux);
+    //BUGANDO QUANDO COLOCO 2 IMPRIMES JUNTOS, POR QUE?
+        //ImprimePorBusca(aux);
     printf("Musica nao encontrada.\n");
 
 }

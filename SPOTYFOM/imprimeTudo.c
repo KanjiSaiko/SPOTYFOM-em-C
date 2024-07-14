@@ -7,9 +7,8 @@ void imprime(DescLE *descritor){
     char titulo[256], escolha;
     int loop = 1;
     endwin();
-    do{
         aux = descritor->primeiro;
-        printf("Digite: [1] Imprimir pelo titulo || [2] para imprimir tudo || Qualquer outra tecla para voltar\n");
+        printf("Digite: [1] Imprimir pelo titulo || [2] para imprimir tudo\n");
         setbuf(stdin, NULL);
         scanf(" %c", &escolha);
         switch(escolha){
@@ -49,12 +48,6 @@ void imprime(DescLE *descritor){
                     aux = aux->prox;
                 }
                 break;
-
-            default:
-                loop = 0;
-                break;
         }
-
-    }while(loop == 1);
 
 }

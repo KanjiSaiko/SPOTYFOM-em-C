@@ -54,13 +54,27 @@ void desenhaTelaMusicas(float *altura, float *largura, struct TelaExec *TelaMusi
     start_color(); // Inicializa o modo de cores
 
     // Define um par de cores (texto branco no fundo preto)
-    init_pair(1, COLOR_BLACK, COLOR_WHITE);
+    init_pair(1, COLOR_WHITE, COLOR_BLACK);
+    //TEXTO CINZA ESCURO E FUNDO VERMELHO ESCURO
+    init_pair(2, 1, 234);
+    //TEXTO AMARELO DOURADO E FUNDO CINZA ESCURO
+    init_pair(3, 178, 234);
 
 
     // Criação dos contêineres
     TelaMusicas->header = newwin(*altura*0.10, *largura*0.5 + *largura*0.5, 0, 0);
     TelaMusicas->content = newwin(*altura*0.80, *largura, *altura*0.10, 0);
     TelaMusicas->footer = newwin(*altura*0.10, *largura, *altura*0.90, 0);
+
+    // Aplicar o par de cores a toda a janela e preencher com espaço
+        wbkgd(TelaMusicas->header, COLOR_PAIR(3) | ' ');
+        wbkgd(TelaMusicas->content, COLOR_PAIR(3) | ' ');
+        wbkgd(TelaMusicas->footer, COLOR_PAIR(3) | ' ');
+
+        // Redesenhar as janelas para aplicar o fundo
+        wrefresh(TelaMusicas->header);
+        wrefresh(TelaMusicas->content);
+        wrefresh(TelaMusicas->footer);
 
     // Desenho dos contêineres
     box(TelaMusicas->header, 0, 0);
@@ -80,7 +94,6 @@ void desenhaMusicasRandom(float largura, float altura, struct TelaExec *TelaMusi
     int start_line = 0; // Linha inicial para rolagem
     int i = 0, linhas;
     int total_musics = 0; // Total de músicas na lista
-    attron(COLOR_PAIR(1)); // Ativa o par de cores número 1
 
     getmaxyx(TelaMusicas->header, header_alt, header_larg);
     getmaxyx(TelaMusicas->content, cont_alt, cont_larg);
@@ -90,7 +103,7 @@ void desenhaMusicasRandom(float largura, float altura, struct TelaExec *TelaMusi
     
     //HEADER
         wattron(TelaMusicas->header, A_BLINK);
-        mvwprintw(TelaMusicas->header, 1, (header_larg-strlen("Playlist Executada"))/2, "Playlist Executada");
+        mvwprintw(TelaMusicas->header, 1, (header_larg-strlen("Playlist Executada"))/2, "PLAYLIST EXECUTADA");
         wattroff(TelaMusicas->header, A_BLINK);
 
     // Calcula o total de músicas
@@ -108,6 +121,10 @@ void desenhaMusicasRandom(float largura, float altura, struct TelaExec *TelaMusi
         while (aux != NULL && i < start_line + cont_alt - 2) {
             if (i >= start_line) {
                 mvwprintw(TelaMusicas->content, 1 + (i - start_line), 1, "Musica: %s", aux->info->titulo);
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), cont_larg/4, "Artista: %s", aux->info->artista);
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), cont_larg-95, "Letra: %s", aux->info->letra);
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), cont_larg-30, "Codigo: %d", aux->info->codigo);
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), cont_larg-strlen("Execucoes: ")-6, "Execucoes: %d", aux->info->execucoes);
             }
             aux = aux->prox;
             i++;
@@ -116,7 +133,7 @@ void desenhaMusicasRandom(float largura, float altura, struct TelaExec *TelaMusi
 
 
     //FOOTER
-        mvwprintw(TelaMusicas->footer, 1, 1, "Press F1 to quit");
+        mvwprintw(TelaMusicas->footer, 1, 1, "Press KEY_DOWN/UP para passar conteudo ou F1 para sair");
         mvwprintw(TelaMusicas->footer, 1, (foot_larg-strlen("Henrique de Lima Bortolomiol"))/2, "Henrique de Lima Bortolomiol");
 
     // Atualização das janelas
@@ -146,6 +163,10 @@ void desenhaMusicasRandom(float largura, float altura, struct TelaExec *TelaMusi
         while (aux != NULL && i < start_line + cont_alt - 2) {
             if (i >= start_line) {
                 mvwprintw(TelaMusicas->content, 1 + (i - start_line), 1, "Musica: %s", aux->info->titulo);
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), cont_larg/4, "Artista: %s", aux->info->artista);
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), cont_larg-95, "Letra: %s", aux->info->letra);
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), cont_larg-30, "Codigo: %d", aux->info->codigo);
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), cont_larg-strlen("Execucoes: ")-6, "Execucoes: %d", aux->info->execucoes);
             }
             aux = aux->prox;
             i++;
@@ -171,14 +192,13 @@ void desenhaMusicasPessoal(float largura, float altura, struct TelaExec *TelaMus
     int start_line = 0; // Linha inicial para rolagem
     int total_musics = 0; // Total de músicas na lista
     int i = 0, linhas;
-    attron(COLOR_PAIR(1)); // Ativa o par de cores número 1
 
     getmaxyx(TelaMusicas->header, header_alt, header_larg);
     getmaxyx(TelaMusicas->content, cont_alt, cont_larg);
     getmaxyx(TelaMusicas->footer, foot_alt, foot_larg);
     //HEADER
         wattron(TelaMusicas->header, A_BLINK);
-        mvwprintw(TelaMusicas->header, 1, (header_larg-strlen("Playlist Executada"))/2, "Playlist Executada");
+        mvwprintw(TelaMusicas->header, 1, (header_larg-strlen("PLAYLIST EXECUTADA"))/2, "PLAYLIST EXECUTADA");
         wattroff(TelaMusicas->header, A_BLINK);
 
     // Calcula o total de músicas
@@ -204,7 +224,7 @@ void desenhaMusicasPessoal(float largura, float altura, struct TelaExec *TelaMus
 
 
     //FOOTER
-        mvwprintw(TelaMusicas->footer, 1, 1, "Press F1 to quit");
+        mvwprintw(TelaMusicas->footer, 1, 1, "Press KEY_DOWN/UP para passar conteudo ou F1 para sair");
         mvwprintw(TelaMusicas->footer, 1, (foot_larg-strlen("Henrique de Lima Bortolomiol"))/2, "Henrique de Lima Bortolomiol");
 
     // Atualização das janelas

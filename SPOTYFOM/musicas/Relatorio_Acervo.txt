@@ -31,7 +31,7 @@ Artista: [14 Bis]
 Codigo: [4]
 Titulo [NATURAL]
 Letra: [Penso em voce no seu jeito de falar]
-Vezes escutada: [0]
+Vezes escutada: [1]
 ===========================
 
 Artista: [14 Bis]
@@ -675,7 +675,7 @@ Artista: [Aerosmith]
 Codigo: [96]
 Titulo [I DON T WANT TO MISS A THING]
 Letra: [I could stay awake just to hear you brea ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Aerosmith]
@@ -1312,7 +1312,7 @@ Artista: [Alanis Morissette]
 Codigo: [187]
 Titulo [HAND IN MY POCKET]
 Letra: [I m broke but I m happy I m poor but]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Alanis Morissette]
@@ -2201,7 +2201,7 @@ Artista: [Almir Sater]
 Codigo: [314]
 Titulo [VARANDAS]
 Letra: [A noite e um misterio que eu finjo co]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Almir Sater]
@@ -2509,7 +2509,7 @@ Artista: [Amado Batista]
 Codigo: [358]
 Titulo [AGORA OU NUNCA MAIS]
 Letra: [Sou um amor passageiro que esta]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Amado Batista]
@@ -6506,7 +6506,7 @@ Artista: [Barao Vermelho]
 Codigo: [929]
 Titulo [BETE BALANcO]
 Letra: [Pode seguir a tua estrela o teu brinquedo]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Barao Vermelho]
@@ -6527,7 +6527,7 @@ Artista: [Barao Vermelho]
 Codigo: [932]
 Titulo [O POETA ESTA VIVO]
 Letra: [Baby compra o jornal e vem ver o sol]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Barao Vermelho]
@@ -9285,7 +9285,7 @@ Artista: [Bruce Springsteen]
 Codigo: [1326]
 Titulo [DANCING IN THE DARK]
 Letra: [I get up in the evening]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Bruce Springsteen]
@@ -10419,7 +10419,7 @@ Artista: [Caetano Veloso]
 Codigo: [1488]
 Titulo [LUA E ESTRELA]
 Letra: [Menina do anel de lua e estrela]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Caetano Veloso]
@@ -13849,7 +13849,7 @@ Artista: [Christian E Ralf]
 Codigo: [1978]
 Titulo [VIRA VIROU]
 Letra: [Por causa de voce]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Christian E Ralf]
@@ -19764,7 +19764,7 @@ Artista: [Ellie Goulding]
 Codigo: [2823]
 Titulo [HOW LONG WILL I LOVE YOU]
 Letra: [How long will I love you]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Ellie Goulding]
@@ -25931,7 +25931,7 @@ Artista: [Grupo Pirraca]
 Codigo: [3704]
 Titulo [INIGUALAVEL PAIXAO]
 Letra: [Es inigualavel na arte de amar]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Grupo Pirraca]
@@ -30313,7 +30313,7 @@ Artista: [Ivete Sangalo]
 Codigo: [4330]
 Titulo [CANIBAL]
 Letra: [Morava numa ilha perdida e deserta ]
-Vezes escutada: [1]
+Vezes escutada: [0]
 ===========================
 
 Artista: [Ivete Sangalo]

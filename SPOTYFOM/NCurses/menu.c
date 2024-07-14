@@ -5,12 +5,14 @@ char terminal(Playlist *playlist) {
     int ch, r, i, j, instLogic, instAri, instDesvio, instAcessoMem;
     char escolha = ' ';
     struct TELA *tela = (struct TELA *)malloc(sizeof(struct TELA));
+
    
     //puts("Debug");
     clear();
     while (escolha == ' ') 
     {
         inicializaTerminal();
+        
         desenhaTelaInicial(tela, &altura, &largura);
         desenhaMenu(tela, largura, playlist);
 
@@ -66,21 +68,37 @@ void desenhaTelaInicial(struct TELA *tela, float *altura, float *largura){
     start_color(); // Inicializa o modo de cores
 
     // Define um par de cores (texto branco no fundo preto)
-    init_pair(1, COLOR_BLACK, COLOR_WHITE);
-    init_pair(2, COLOR_WHITE, COLOR_BLACK);
-
+    init_pair(1, COLOR_WHITE, COLOR_BLACK);
+    //TEXTO CINZA ESCURO E FUNDO VERMELHO ESCURO
+    init_pair(2, 1, 234);
+    //TEXTO AMARELO DOURADO E FUNDO CINZA ESCURO
+    init_pair(3, 178, 234);
+    
     //puts("Debug");
     // Criação dos contêineres
     tela->header = newwin(*altura*0.10, *largura*0.5 + *largura*0.5, 0, 0);
     tela->menu = newwin(*altura*0.80, *largura*0.5, *altura*0.10, 0);
     tela->content = newwin(*altura*0.80, *largura*0.5, *altura*0.10, *largura*0.5);
     tela->footer = newwin(*altura*0.10, *largura, *altura*0.9, 0);
+    
+    // Aplicar o par de cores a toda a janela e preencher com espaço
+        wbkgd(tela->header, COLOR_PAIR(3) | ' ');
+        wbkgd(tela->menu, COLOR_PAIR(3) | ' ');
+        wbkgd(tela->content, COLOR_PAIR(3) | ' ');
+        wbkgd(tela->footer, COLOR_PAIR(3) | ' ');
+
+        // Redesenhar as janelas para aplicar o fundo
+        wrefresh(tela->header);
+        wrefresh(tela->menu);
+        wrefresh(tela->content);
+        wrefresh(tela->footer);
 
     // Desenho dos contêineres
-    box(tela->header, 0, 0);
-    box(tela->menu, 0, 0);
-    box(tela->content, 0, 0);
-    box(tela->footer, 0, 0);
+        box(tela->header, 0, 0);
+        box(tela->menu, 0, 0);
+        box(tela->content, 0, 0);
+        box(tela->footer, 0, 0);
+
 
     // Atualização das janelas
     wrefresh(tela->header);
@@ -92,20 +110,22 @@ void desenhaTelaInicial(struct TELA *tela, float *altura, float *largura){
 void desenhaMenu(struct TELA *tela, float largura, Playlist *playlist)
 {
     int header_alt, header_larg, menu_alt, menu_larg, cont_alt, cont_larg, foot_alt, foot_larg, maximoR, maximoP;
-    int i, tamanhoColunaF = 18, tamanhoColunaP = 18, linhaR = 8, linhaP;
+    int i, tamanhoColunaF, tamanhoColunaP, linhaR = 8, linhaP;
     char nomeAntP[300], nomeAntF[300];
     DescFila *auxFila = playlist->primeiroFila;
     DescPilha *auxPilha = playlist->primeiroPilha;
     nomeAntP[0] = '\0';
     nomeAntF[0] = '\0';
 
-    attron(COLOR_PAIR(1)); // Ativa o par de cores número 1
 
     //coleto a largura e altura das janelas
     getmaxyx(tela->header, header_alt, header_larg);
     getmaxyx(tela->menu, menu_alt, menu_larg);
     getmaxyx(tela->content, cont_alt, cont_larg);
     getmaxyx(tela->footer, foot_alt, foot_larg);
+
+    tamanhoColunaF = ((cont_larg-strlen("|-----------------------------------------------------|"))/2)+1;
+    tamanhoColunaP = ((cont_larg-strlen("|-----------------------------------------------------|"))/2)+1;
 
     //HEAR
     wattron(tela->header, A_BLINK);
@@ -139,9 +159,9 @@ void desenhaMenu(struct TELA *tela, float largura, Playlist *playlist)
                     while(auxFila != NULL){
                         
                         //se a coluna estourar o layout, preciso aumentar uma linha pra baixo
-                            if(tamanhoColunaF >= (35/2)+strlen("|-----------------------------------------------------|")){
+                            if(tamanhoColunaF >= (((cont_larg-strlen("|-----------------------------------------------------|"))/2)+1)+strlen("|-----------------------------------------------------|")){
                                 linhaR+=2;
-                                tamanhoColunaF = 18;
+                                tamanhoColunaF = ((cont_larg-strlen("|-----------------------------------------------------|"))/2)+1;
                         }
 
                         wattron(tela->content, A_REVERSE | A_BOLD);//REVERTE AS CORES DO FUNDO COM O TEXTO E DEIXA EM NEGRITO
@@ -173,9 +193,9 @@ void desenhaMenu(struct TELA *tela, float largura, Playlist *playlist)
                 else{
                     while(auxPilha != NULL){
                         //se a coluna estourar o layout, preciso aumentar uma linha pra baixo
-                            if(tamanhoColunaP >= (35/2)+strlen("|-----------------------------------------------------|")){
+                            if(tamanhoColunaP >= (((cont_larg-strlen("|-----------------------------------------------------|"))/2)+1)+strlen("|-----------------------------------------------------|")){
                                 linhaP+=2;
-                                tamanhoColunaP = 18;
+                                tamanhoColunaP = ((cont_larg-strlen("|-----------------------------------------------------|"))/2)+1;
                         }
                         wattron(tela->content, A_REVERSE | A_BOLD);//REVERTE AS CORES DO FUNDO COM O TEXTO E DEIXA EM NEGRITO
                         mvwprintw(tela->content, linhaP+5, tamanhoColunaP, "%s-%d", auxPilha->nome, auxPilha->tamanho);
