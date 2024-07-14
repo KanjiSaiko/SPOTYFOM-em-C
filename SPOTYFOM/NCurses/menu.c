@@ -123,16 +123,16 @@ void desenhaMenu(struct TELA *tela, float largura, Playlist *playlist)
     mvwprintw(tela->menu, menu_alt/4+8, ((largura/2)-strlen("2     ADICIONAR PLAYLIST"))/2, "0     ENCERRAR");
 
         //CONTENT
-        mvwprintw(tela->content, 2, 35, "=== PLAYLISTS ===");
+        mvwprintw(tela->content, 2, (cont_larg-strlen("=== PLAYLISTS ==="))/2, "=== PLAYLISTS ===");
 
-        mvwprintw(tela->content, 4, 34, "--------------------");
+        mvwprintw(tela->content, 4, (cont_larg-strlen("--------------------"))/2, "--------------------");
 
         //PLAYLIST RANDOM
-            mvwprintw(tela->content, 5, 35, "PLAYLIST RANDOMICA");
-            mvwprintw(tela->content, 7,  35/2, "|-----------------------------------------------------|");
+            mvwprintw(tela->content, 5, (cont_larg-strlen("PLAYLIST RANDOMICA"))/2, "PLAYLIST RANDOMICA");
+            mvwprintw(tela->content, 7,  (cont_larg-strlen("|-----------------------------------------------------|"))/2, "|-----------------------------------------------------|");
             //se nao existir playlists aleatorias:
                 if(playlist->primeiroFila == NULL){
-                    mvwprintw(tela->content, 8, 35/2, "Sem playlists adicionadas");
+                    mvwprintw(tela->content, 8, (cont_larg-strlen("Sem playlists adicionadas"))/2, "Sem playlists adicionadas");
                 }
             //caso exista:
                 else{
@@ -156,18 +156,18 @@ void desenhaMenu(struct TELA *tela, float largura, Playlist *playlist)
                     }
                 }
             linhaR+=2;
-            mvwprintw(tela->content, linhaR, 35/2, "|-----------------------------------------------------|");
+            mvwprintw(tela->content, linhaR, (cont_larg-strlen("|-----------------------------------------------------|"))/2, "|-----------------------------------------------------|");
 
             linhaP = linhaR;
-            mvwprintw(tela->content, linhaP+2, 34, "--------------------");
+            mvwprintw(tela->content, linhaP+2, (cont_larg-strlen("-----------------"))/2, "-----------------");
 
         //PLAYLIST PESSOAL  
-            mvwprintw(tela->content, linhaP+3, 35, "PLAYLIST PESSOAL");
-            mvwprintw(tela->content,  linhaP+4, 35/2, "|-----------------------------------------------------|");
+            mvwprintw(tela->content, linhaP+3, (cont_larg-strlen("PLAYLIST PESSOAL"))/2, "PLAYLIST PESSOAL");
+            mvwprintw(tela->content,  linhaP+4, (cont_larg-strlen("|-----------------------------------------------------|"))/2, "|-----------------------------------------------------|");
             //se nao existir playlists aleatorias:
                 if(playlist->primeiroPilha== NULL){
                     //tamanho padrao da linha P = 12;
-                    mvwprintw(tela->content, linhaP+5, 35/2, "Sem playlists adicionadas");
+                    mvwprintw(tela->content, linhaP+5, (cont_larg-strlen("Sem playlists adicionadas"))/2, "Sem playlists adicionadas");
                 }
             //caso exista:
                 else{
@@ -188,7 +188,7 @@ void desenhaMenu(struct TELA *tela, float largura, Playlist *playlist)
                     }
                 }
             linhaP+=2;
-            mvwprintw(tela->content, linhaP+5, 35/2, "|-----------------------------------------------------|");
+            mvwprintw(tela->content, linhaP+5, (cont_larg-strlen("|-----------------------------------------------------|"))/2, "|-----------------------------------------------------|");
 
     //FOOTER
     mvwprintw(tela->footer, 1, largura/2, "AUTOR");
