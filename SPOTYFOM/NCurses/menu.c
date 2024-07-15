@@ -78,7 +78,7 @@ void desenhaTelaInicial(struct TELA *tela, float *altura, float *largura){
     // Criação dos contêineres
     tela->header = newwin(*altura*0.10, *largura*0.5 + *largura*0.5, 0, 0);
     tela->menu = newwin(*altura*0.80, *largura*0.5, *altura*0.10, 0);
-    tela->content = newwin(*altura*0.80, *largura*0.5, *altura*0.10, *largura*0.5);
+    tela->content = newwin(*altura*0.80, *largura*0.5+1, *altura*0.10, *largura*0.5);
     tela->footer = newwin(*altura*0.10, *largura, *altura*0.9, 0);
     
     // Aplicar o par de cores a toda a janela e preencher com espaço
