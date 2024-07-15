@@ -79,6 +79,7 @@ do menu de SAIR seja selecionada.
 
 MENU:
 O menu se apresenta da seguinte maneira:
-![Captura de tela 2024-07-13 230336](https://github.com/user-attachments/assets/16933bca-983b-4df0-b239-5aa3c68355e7)
+
+![Captura de tela 2024-07-14 221621](https://github.com/user-attachments/assets/06804266-eeb0-4eea-baef-26dbd336f6e7)
 
 
