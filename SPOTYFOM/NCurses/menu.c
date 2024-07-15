@@ -76,9 +76,9 @@ void desenhaTelaInicial(struct TELA *tela, float *altura, float *largura){
     
     //puts("Debug");
     // Criação dos contêineres
-    tela->header = newwin(*altura*0.10, *largura*0.5 + *largura*0.5, 0, 0);
+    tela->header = newwin(*altura*0.10, *largura, 0, 0);
     tela->menu = newwin(*altura*0.80, *largura*0.5, *altura*0.10, 0);
-    tela->content = newwin(*altura*0.80, *largura*0.5, *altura*0.10, *largura*0.5);
+    tela->content = newwin(*altura*0.80, *largura*0.5+1, *altura*0.10, *largura*0.5);
     tela->footer = newwin(*altura*0.10, *largura, *altura*0.9, 0);
     
     // Aplicar o par de cores a toda a janela e preencher com espaço
@@ -183,11 +183,11 @@ void desenhaMenu(struct TELA *tela, float largura, Playlist *playlist)
 
         //PLAYLIST PESSOAL  
             mvwprintw(tela->content, linhaP+3, (cont_larg-strlen("PLAYLIST PESSOAL"))/2, "PLAYLIST PESSOAL");
-            mvwprintw(tela->content,  linhaP+4, (cont_larg-strlen("|-----------------------------------------------------|"))/2, "|-----------------------------------------------------|");
+            mvwprintw(tela->content,  linhaP+5, (cont_larg-strlen("|-----------------------------------------------------|"))/2, "|-----------------------------------------------------|");
             //se nao existir playlists aleatorias:
                 if(playlist->primeiroPilha== NULL){
                     //tamanho padrao da linha P = 12;
-                    mvwprintw(tela->content, linhaP+5, (cont_larg-strlen("Sem playlists adicionadas"))/2, "Sem playlists adicionadas");
+                    mvwprintw(tela->content, linhaP+6, (cont_larg-strlen("Sem playlists adicionadas"))/2, "Sem playlists adicionadas");
                 }
             //caso exista:
                 else{
@@ -198,7 +198,7 @@ void desenhaMenu(struct TELA *tela, float largura, Playlist *playlist)
                                 tamanhoColunaP = ((cont_larg-strlen("|-----------------------------------------------------|"))/2)+1;
                         }
                         wattron(tela->content, A_REVERSE | A_BOLD);//REVERTE AS CORES DO FUNDO COM O TEXTO E DEIXA EM NEGRITO
-                        mvwprintw(tela->content, linhaP+5, tamanhoColunaP, "%s-%d", auxPilha->nome, auxPilha->tamanho);
+                        mvwprintw(tela->content, linhaP+6, tamanhoColunaP, "%s-%d", auxPilha->nome, auxPilha->tamanho);
                         wattroff(tela->content, A_REVERSE | A_BOLD);
 
                         //copio o nome anterior para saber o espaçamento
@@ -208,7 +208,7 @@ void desenhaMenu(struct TELA *tela, float largura, Playlist *playlist)
                     }
                 }
             linhaP+=2;
-            mvwprintw(tela->content, linhaP+5, (cont_larg-strlen("|-----------------------------------------------------|"))/2, "|-----------------------------------------------------|");
+            mvwprintw(tela->content, linhaP+6, (cont_larg-strlen("|-----------------------------------------------------|"))/2, "|-----------------------------------------------------|");
 
     //FOOTER
     mvwprintw(tela->footer, 1, largura/2, "AUTOR");
