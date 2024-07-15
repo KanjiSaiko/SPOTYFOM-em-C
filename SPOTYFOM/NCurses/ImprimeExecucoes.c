@@ -216,6 +216,10 @@ void desenhaMusicasPessoal(float largura, float altura, struct TelaExec *TelaMus
         while (aux != NULL && i < start_line + cont_alt - 2) {
             if (i >= start_line) {
                 mvwprintw(TelaMusicas->content, 1 + (i - start_line), 1, "Musica: %s", aux->info->titulo);
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), cont_larg/4, "Artista: %s", aux->info->artista);
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), cont_larg-95, "Letra: %s", aux->info->letra);
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), cont_larg-30, "Codigo: %d", aux->info->codigo);
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), cont_larg-strlen("Execucoes: ")-6, "Execucoes: %d", aux->info->execucoes);
             }
             aux = aux->prox;
             i++;
@@ -254,6 +258,10 @@ void desenhaMusicasPessoal(float largura, float altura, struct TelaExec *TelaMus
         while (aux != NULL && i < start_line + cont_alt - 2) {
             if (i >= start_line) {
                 mvwprintw(TelaMusicas->content, 1 + (i - start_line), 1, "Musica: %s", aux->info->titulo);
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), cont_larg/4, "Artista: %s", aux->info->artista);
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), cont_larg-95, "Letra: %s", aux->info->letra);
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), cont_larg-30, "Codigo: %d", aux->info->codigo);
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), cont_larg-strlen("Execucoes: ")-6, "Execucoes: %d", aux->info->execucoes);
             }
             aux = aux->prox;
             i++;
