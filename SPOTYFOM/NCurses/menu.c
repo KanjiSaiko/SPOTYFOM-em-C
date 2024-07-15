@@ -76,9 +76,9 @@ void desenhaTelaInicial(struct TELA *tela, float *altura, float *largura){
     
     //puts("Debug");
     // Criação dos contêineres
-    tela->header = newwin(*altura*0.10, *largura, 0, 0);
+    tela->header = newwin(*altura*0.10, *largura*0.5 + *largura*0.5, 0, 0);
     tela->menu = newwin(*altura*0.80, *largura*0.5, *altura*0.10, 0);
-    tela->content = newwin(*altura*0.80, *largura*0.5+1, *altura*0.10, *largura*0.5);
+    tela->content = newwin(*altura*0.80, *largura*0.5, *altura*0.10, *largura*0.5);
     tela->footer = newwin(*altura*0.10, *largura, *altura*0.9, 0);
     
     // Aplicar o par de cores a toda a janela e preencher com espaço
@@ -133,7 +133,7 @@ void desenhaMenu(struct TELA *tela, float largura, Playlist *playlist)
     wattron(tela->header, A_BLINK);
 
     //MENU
-    mvwprintw(tela->menu, menu_alt/4,  ((largura/2)-strlen("__________MENU__________"))/2, "__________MENU__________");
+    mvwprintw(tela->menu, menu_alt/4,  ((largura/2)-strlen("|----------MENU----------|"))/2, "|----------MENU----------|");
     mvwprintw(tela->menu, menu_alt/4+2,  ((largura/2)-strlen("2     ADICIONAR PLAYLIST"))/2, "1     EXECUTAR");
     mvwprintw(tela->menu, menu_alt/4+3,  ((largura/2)-strlen("2     ADICIONAR PLAYLIST"))/2, "2     ADICIONAR PLAYLIST");
     mvwprintw(tela->menu, menu_alt/4+4,  ((largura/2)-strlen("2     ADICIONAR PLAYLIST"))/2, "3     IMPRIMIR");
