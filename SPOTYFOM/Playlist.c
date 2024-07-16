@@ -3,6 +3,7 @@
 Playlist *playlistRandom(DescLE *descritor, int tamlinhas, Playlist *playlist){
     DescFila *playlistFila = inicializaFila();
     NodoLP *aux = descritor->primeiro;
+    Musica *musica = NULL;
     srand(time(NULL));
     int auxiliar, auxiliar2, tamanho, tamanhoaux = 0;
     printf("Digite o tamanho da playlist: ");
@@ -35,12 +36,18 @@ Playlist *playlistRandom(DescLE *descritor, int tamlinhas, Playlist *playlist){
 
     //VERIFICAÇÃO PARA VER SE A PLAYLIST COM ESSE NOME JA EXISTE, CASO EXISTA, COLOCO AS MUSICAS DENTRO DELA
         while(auxplaylist != NULL){
-            if(strcmp(auxplaylist->nome, playlistFila->nome) == 0){
-                playlistFila->prox = auxplaylist->prox;
-                *auxplaylist = *playlistFila;
-                return playlist;
-            }
-            auxplaylist = auxplaylist->prox;
+                if(strcmp(auxplaylist->nome, playlistFila->nome) == 0){
+                    //ENCONTROU UMA PLAYLIST EXISTENTE:
+                        //adicionar os itens na playlist antiga ao inves de substituir:
+                            while(playlistFila->head != NULL){
+                                musica = playlistFila->head->info;
+                                NodoFila *nodoFila = inicializaNodoF(musica);
+                                auxplaylist = addNodoFila(auxplaylist, nodoFila);
+                                playlistFila = Dequeue(playlistFila);
+                            }
+                    return playlist;
+                }
+                auxplaylist = auxplaylist->prox;
         }
 
     //adiciona a nova fila na playlist:
@@ -61,7 +68,7 @@ Playlist *playlistRandom(DescLE *descritor, int tamlinhas, Playlist *playlist){
 
 Playlist *playlistPessoal(DescLE *descritor, Playlist *playlist){
     DescPilha *playlistPilha = inicializaPilha();
-    Musica *musica;
+    Musica *musica = NULL;
     int auxiliar = 1;
     char escolha1, escolha2;
     DescPilha *auxplaylist = playlist->primeiroPilha;
