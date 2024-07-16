@@ -59,7 +59,7 @@ int main(void){
                 break;
             
             case '5':
-                musicaBuscada = Busca(descritorLE);
+                musicaBuscada = BuscaPorTudo(descritorLE);
                 break;
 
             case '6':

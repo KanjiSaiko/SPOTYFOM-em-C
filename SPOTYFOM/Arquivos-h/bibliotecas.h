@@ -71,19 +71,34 @@ DescLE *inicializaLE();
 DescPilha *inicializaPilha();
 DescFila *inicializaFila();
 Playlist *inicializaPlaylist();
+
 DescLE *parser(int *tamLinhas);
+
 NodoLP *criaNodo();
 DescLE *addMusica(DescLE *descritorLista, NodoLP *nodo);
+
 void imprime(DescLE *descritor);
-Musica *Busca(DescLE *descritor);
+void imprimeTudo(char *titulo, char *letra, char *artista, int execucoes, int codigo);
+
+Musica *BuscaPorTudo(DescLE *descritor);
+DescPilha *BuscaAlbum(DescLE *descritor, DescPilha *album);
+DescPilha *BuscaMusica(DescLE *descritor, DescPilha *album);
+
 NodoFila *inicializaNodoF(Musica *musica);
 DescFila *addNodoFila(DescFila *descritor, NodoFila *nodo);
+DescFila *Dequeue(DescFila *descritor);
+
 NodoLP *inicializaNodoP(Musica *musica);
 DescPilha *addNodoPilha(DescPilha *descritor, NodoLP *nodo);
+DescPilha *POP(DescPilha *descritor);
+
 Playlist *playlistRandom(DescLE *descritor, int tamlinhas, Playlist *playlist);
 Playlist *playlistPessoal(DescLE *descritor, Playlist *playlist);
+
 DescLE *ExecucaoRandom(Playlist *playlist, DescLE *descritor);
 DescLE *ExecucaoPessoal(Playlist *playlist, DescLE *descritor);
+void printaExec(char *titulo, char *letra, char *artista);
+
 void Relatorio(Playlist *playlist, DescLE *descritor);
 void *Backup(DescLE *descritor);
 

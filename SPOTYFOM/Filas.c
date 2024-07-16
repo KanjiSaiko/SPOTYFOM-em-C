@@ -31,3 +31,16 @@ NodoFila *inicializaNodoF(Musica *musica){
     nodo->info = musica;
     return nodo;
 }
+
+DescFila *Dequeue(DescFila *descritor){
+    NodoFila *aux = descritor->head;
+    descritor->head = aux->prox;
+    if(descritor->head != NULL){
+        descritor->head->ant = NULL;
+    }
+    else{
+        descritor->tail = NULL;
+    }
+    descritor->tamanho--;
+    return descritor;
+}

@@ -184,7 +184,7 @@ void desenhaMenu(struct TELA *tela, float largura, Playlist *playlist)
         //PLAYLIST PESSOAL  
             mvwprintw(tela->content, linhaP+3, (cont_larg-strlen("PLAYLIST PESSOAL"))/2, "PLAYLIST PESSOAL");
             mvwprintw(tela->content,  linhaP+5, (cont_larg-strlen("|-----------------------------------------------------|"))/2, "|-----------------------------------------------------|");
-            //se nao existir playlists aleatorias:
+            //se nao existir playlists pessoais:
                 if(playlist->primeiroPilha== NULL){
                     //tamanho padrao da linha P = 12;
                     mvwprintw(tela->content, linhaP+6, (cont_larg-strlen("Sem playlists adicionadas"))/2, "Sem playlists adicionadas");

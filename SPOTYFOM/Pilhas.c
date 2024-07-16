@@ -31,3 +31,14 @@ DescPilha *inicializaPilha(){
     descPilha->tamanho = 0;
     return descPilha;
 }
+
+DescPilha *POP(DescPilha *descritor){
+    if(descritor->Topo == NULL)
+        return NULL;
+    NodoLP *aux = descritor->Topo;
+    descritor->Topo = aux->prox;
+    descritor->tamanho--;
+    if(descritor->tamanho == 0)
+        descritor->Fundo = NULL;
+    return descritor;
+}

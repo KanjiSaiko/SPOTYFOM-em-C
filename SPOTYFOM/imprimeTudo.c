@@ -20,13 +20,7 @@ void imprime(DescLE *descritor){
                 titulo[strlen(titulo) - 1] = '\0';
                 while(aux != NULL){
                     if(strcmp(aux->info->titulo, titulo) == 0){
-                        printf("\n==========================\n");
-                        printf("Titulo: %s\n", aux->info->titulo);
-                        printf("Letra: %s\n", aux->info->letra);
-                        printf("Artista: %s\n", aux->info->artista);
-                        printf("Execucoes: %d\n", aux->info->execucoes);
-                        printf("Codigo: %d\n", aux->info->codigo);
-                        printf("==========================\n");
+                        imprimeTudo(aux->info->titulo, aux->info->letra, aux->info->artista, aux->info->execucoes, aux->info->codigo);
                         loop = 0;
                         break;
                     }
@@ -38,16 +32,20 @@ void imprime(DescLE *descritor){
             case '2':
                 ImprimeMUSICAS(descritor);
                 while (aux != NULL){
-                    printf("\n==========================\n");
-                    printf("Titulo: %s\n", aux->info->titulo);
-                    printf("Letra: %s\n", aux->info->letra);
-                    printf("Artista: %s\n", aux->info->artista);
-                    printf("Execucoes: %d\n", aux->info->execucoes);
-                    printf("Codigo: %d\n", aux->info->codigo);
-                    printf("==========================\n");
+                    imprimeTudo(aux->info->titulo, aux->info->letra, aux->info->artista, aux->info->execucoes, aux->info->codigo);
                     aux = aux->prox;
                 }
                 break;
         }
 
+}
+
+void imprimeTudo(char *titulo, char *letra, char *artista, int execucoes, int codigo){
+        printf("\n==========================\n");
+        printf("Titulo: %s\n", titulo);
+        printf("Letra: %s\n", letra);
+        printf("Artista: %s\n", artista);
+        printf("Execucoes: %d\n", execucoes);
+        printf("Codigo: %d\n", codigo);
+        printf("==========================\n");
 }

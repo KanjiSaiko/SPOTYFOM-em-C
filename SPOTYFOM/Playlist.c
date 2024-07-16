@@ -36,6 +36,7 @@ Playlist *playlistRandom(DescLE *descritor, int tamlinhas, Playlist *playlist){
     //VERIFICAÇÃO PARA VER SE A PLAYLIST COM ESSE NOME JA EXISTE, CASO EXISTA, COLOCO AS MUSICAS DENTRO DELA
         while(auxplaylist != NULL){
             if(strcmp(auxplaylist->nome, playlistFila->nome) == 0){
+                playlistFila->prox = auxplaylist->prox;
                 *auxplaylist = *playlistFila;
                 return playlist;
             }
@@ -62,33 +63,48 @@ Playlist *playlistPessoal(DescLE *descritor, Playlist *playlist){
     DescPilha *playlistPilha = inicializaPilha();
     Musica *musica;
     int auxiliar = 1;
-    char escolha;
-
-    do{
-        musica = Busca(descritor);
-        NodoLP *nodo = inicializaNodoP(musica);
-        playlistPilha = addNodoPilha(playlistPilha, nodo);
-        printf("Digite [1] para adicionar mais Musicas || [0] para criar a playlist\n");
-        scanf(" %c", &escolha);
-        if(escolha != '1' && escolha != '0'){
-            printf("Opcao inexistente\n");
-        }
-    }while(escolha != '0');
-    
+    char escolha1, escolha2;
     DescPilha *auxplaylist = playlist->primeiroPilha;
 
     printf("De um nome a playlist: ");
     setbuf(stdin, NULL);
     scanf("%s", playlistPilha->nome);
 
+    
+
+    do{
+        printf("Digite [1] para adicionar um album || [Any] para uma musica\n");
+        scanf(" %c", &escolha2);
+
+        if(escolha2 == '1'){
+            playlistPilha = BuscaAlbum(descritor, playlistPilha);
+        }
+
+        else{
+            playlistPilha = BuscaMusica(descritor, playlistPilha);
+        }
+        
+        printf("Digite [1] para adicionar mais Musicas || [Any] para criar a playlist\n");
+        setbuf(stdin, NULL);
+        scanf(" %c", &escolha1);
+
+    }while(escolha1 == '1');
+
     //VERIFICAÇÃO PARA VER SE A PLAYLIST COM ESSE NOME JA EXISTE, CASO EXISTA, COLOCO AS MUSICAS DENTRO DELA
         while(auxplaylist != NULL){
                 if(strcmp(auxplaylist->nome, playlistPilha->nome) == 0){
-                    *auxplaylist = *playlistPilha;
+                    //ENCONTROU UMA PLAYLIST EXISTENTE:
+                        //adicionar os itens na playlist antiga ao inves de substituir:
+                            while(playlistPilha->Fundo != NULL){
+                                musica = playlistPilha->Topo->info;
+                                NodoLP *nodoPilha = inicializaNodoP(musica);
+                                auxplaylist = addNodoPilha(auxplaylist, nodoPilha);
+                                playlistPilha = POP(playlistPilha);
+                            }
                     return playlist;
                 }
                 auxplaylist = auxplaylist->prox;
-            }
+        }
 
     //adiciona a nova pilha na playlist:
         if(playlist->primeiroPilha == NULL){
