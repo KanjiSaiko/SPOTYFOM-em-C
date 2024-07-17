@@ -25,7 +25,6 @@ seguintes:
 • Back-up
 • Sair
 
-
 Busca
 – Funcionalidade que permite a busca
 de uma determinada música e exibe
@@ -78,4 +77,8 @@ do menu de SAIR seja selecionada.
 MENU:
 O menu se apresenta da seguinte maneira:
 ![Menu](https://github.com/user-attachments/assets/7c4d5917-f4ab-467a-8a4d-9a21532ced65)
+
+O programa atualmente esta com um bug (no NCurses) em que o usuario deve teclar 3 vezes 'F1' para voltar uma tela.
+
+Mais telas serão commitadas mais para frente
 
