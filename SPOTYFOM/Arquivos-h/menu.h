@@ -3,6 +3,7 @@
 
 #include <ncurses.h>
 #include <menu.h>
+#include <unistd.h>
 #include "bibliotecas.h"
 
 struct TELA{
@@ -18,6 +19,8 @@ char terminal(Playlist *playlist);
 void inicializaTerminal();
 void finalizaTerminal();
 void desenharBorda(WINDOW *win, int start_y, int start_x, int largura, int altura);
+
+void MarcacaoMenu(WINDOW *menu, int adicao, int menu_alt, int largura, char *texto);
 
 
 #endif

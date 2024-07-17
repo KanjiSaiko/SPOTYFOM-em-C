@@ -9,19 +9,15 @@ int main(void){
     char escolha, escolhaplaylist, escolhaExec;
     int tamlinhas;
     Musica *musicaBuscada = NULL;
+    system("clear");
     //primeiro le arquivo:
         descritorLE = parser(&tamlinhas); //abre e le o arquivo, adicionando cada musica em nodos e por fim no descritor
     playlist = inicializaPlaylist();
     inicializa_ncurses();
-    //depois apresenta o menu de opcoes
+    
     do{ 
         system("clear");
         escolha = terminal(playlist);
-        /*printf("\n======================\n");
-        printf("Digite:\n[1]Executar\n[2]Playlist\n[3]Imprime\n[4]Relatorio\n[5]Busca\n[6]Backup\n[0]Sair\n");
-        getchar();
-        setbuf(stdin, NULL);
-        scanf(" %c", &escolha);*/
         switch(escolha){
             case '1':
                 //ADICIONAR A QUESTAO DE QUANDO EXECUTAR E EXCLUIR A PLAYLIST, NAO IMPRIMI-LO NO RELATORIO.

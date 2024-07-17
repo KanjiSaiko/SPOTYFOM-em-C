@@ -5,9 +5,7 @@ char terminal(Playlist *playlist) {
     int ch, r, i, j, instLogic, instAri, instDesvio, instAcessoMem;
     char escolha = ' ';
     struct TELA *tela = (struct TELA *)malloc(sizeof(struct TELA));
-
-   
-    //puts("Debug");
+    int menu_alt, menu_larg;
     clear();
     while (escolha == ' ') 
     {
@@ -15,33 +13,42 @@ char terminal(Playlist *playlist) {
         
         desenhaTelaInicial(tela, &altura, &largura);
         desenhaMenu(tela, largura, playlist);
+        getmaxyx(tela->menu, menu_alt, menu_larg);
 
         ch = getch();
         switch (ch) {
             case '0':
                 escolha = '0';
+                MarcacaoMenu(tela->menu, 8, menu_alt, largura, "0     ENCERRAR");
                 break;
             case '1':
                 escolha = '1';
+                    MarcacaoMenu(tela->menu, 2, menu_alt, largura, "1     EXECUTAR");
                 break;
             case '2':
                 escolha = '2';
+                    MarcacaoMenu(tela->menu, 3, menu_alt, largura, "2     ADICIONAR PLAYLIST");
+                    
                 break;
             case '3':
                 escolha = '3';
+                    MarcacaoMenu(tela->menu, 4, menu_alt, largura, "3     IMPRIMIR");
                 break;
             case '4':
                 escolha = '4';
+                    MarcacaoMenu(tela->menu, 5, menu_alt, largura, "4     RELATORIO");
                 break;
             case '5':
                 escolha = '5';
+                    MarcacaoMenu(tela->menu, 6, menu_alt, largura, "5     BUSCA");
                 break;
             case '6':
                 escolha = '6';
+                    MarcacaoMenu(tela->menu, 7, menu_alt, largura, "6     BACKUP");
                 break;
         }
-        //puts(&escolha);
     }
+
 
     clear();
     finalizaTerminal();
@@ -116,8 +123,6 @@ void desenhaMenu(struct TELA *tela, float largura, Playlist *playlist)
     DescPilha *auxPilha = playlist->primeiroPilha;
     nomeAntP[0] = '\0';
     nomeAntF[0] = '\0';
-
-
     //coleto a largura e altura das janelas
     getmaxyx(tela->header, header_alt, header_larg);
     getmaxyx(tela->menu, menu_alt, menu_larg);
@@ -221,3 +226,16 @@ void desenhaMenu(struct TELA *tela, float largura, Playlist *playlist)
     wrefresh(tela->footer);
 }
 
+
+
+void MarcacaoMenu(WINDOW *menu, int adicao, int menu_alt, int largura, char *texto){
+    // Limpa a linha onde o efeito com a string será exibido
+        mvwhline(menu, menu_alt/4+adicao, ((largura/2)-strlen("2     ADICIONAR PLAYLIST"))/2, ' ' | A_NORMAL, strlen("2     ADICIONAR PLAYLIST"));
+
+    wattron(menu, A_REVERSE | A_BLINK);
+    mvwprintw(menu, menu_alt/4+adicao,  ((largura/2)-strlen("2     ADICIONAR PLAYLIST"))/2, "%s", texto);
+    wrefresh(menu);
+    wattroff(menu, A_REVERSE | A_BLINK);
+    sleep(1);
+    wrefresh(menu);
+}
