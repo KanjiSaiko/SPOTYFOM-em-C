@@ -22,7 +22,7 @@ seguintes:
 • Busca;
 • Impressão;
 • Relatório;
-• Back-up [opcional]
+• Back-up
 • Sair
 
 
@@ -36,17 +36,13 @@ efetuada por meio dos critérios:
 – Artista;
 
 Playslist
-Funcionalidade que utiliza as TADS vistas na
-disciplina (FILA/PILHA) para criar listas de
+Funcionalidade que permite criar listas de
 execuções das músicas conforme alguns
 critérios, são eles:
 • ALEATORIO [FILA]: cria uma fila de músicas de tamanho n
-(definida pelo usuário) de forma randômica (escolhida pelo
-programador);
+(definida pelo usuário) de forma randômica;
 • PLAYLIST PESSOAL [PILHA]: cria uma pilha com as músicas
-selecionadas do usuário (utiliza um método de busca das
-músicas para inserção na playlist pelo usuário definido pelo
-programador);
+selecionadas do usuário;
 
 Execução
 – Funcionalidade que basicamente incrementa o atributo
@@ -65,11 +61,13 @@ Impressão
 Impressão:
 – Funcionalidade que associada a busca de um título, apresenta as informações de
 uma música específica ou de todas as músicas do acervo;
+
 • Relatórios:
 – funcionalidade que gera um arquivo de saída de músicas de cada Playlist
 – Funcionalidade que gera um arquivo com o acervo completo, com o número de
 execuções;
-• Back-up [OPCIONAL]:
+
+• Back-up:
 – funcionalidade que imprime um backup do acervo atual com nomes e quantidades
 de execuções atualizadas no mesmo padrão do arquivo de entrada inicial.
 • Obs: O programa deverá iniciar e apresentar um menu de
@@ -79,5 +77,5 @@ do menu de SAIR seja selecionada.
 
 MENU:
 O menu se apresenta da seguinte maneira:
-![Screenshot from 2024-07-14 22-35-22](https://github.com/user-attachments/assets/7c4d5917-f4ab-467a-8a4d-9a21532ced65)
+![Menu](https://github.com/user-attachments/assets/7c4d5917-f4ab-467a-8a4d-9a21532ced65)
 
