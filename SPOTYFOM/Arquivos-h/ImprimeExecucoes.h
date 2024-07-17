@@ -21,4 +21,6 @@ void desenhaMusicasPessoal(float largura, float altura, struct TelaExec *TelaMus
 void inicializa_ncurses();
 
 
+
+
 #endif

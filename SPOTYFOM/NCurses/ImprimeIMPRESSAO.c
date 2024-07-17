@@ -262,3 +262,118 @@ void desenhaImpressaoTitulo(float largura, float altura, struct TelaExec *TelaIm
             }
         }
     }
+
+
+int ImprimeAlbum(DescPilha *album) {
+    float altura, largura;
+    struct TelaExec *TelaMusicas = (struct TelaExec *)malloc(sizeof(struct TelaExec));
+    int ch;
+    while ((ch = getch()) != KEY_F(1))
+    {
+        //INICIALIZAÇÃO
+            initscr();
+            cbreak();
+            noecho();
+            keypad(stdscr, TRUE);
+            curs_set(0);
+
+        desenhaTelaMusicas(&altura, &largura, TelaMusicas);
+        
+        desenhaAlbum(largura, altura, TelaMusicas, album);
+        getch();
+
+    }
+    endwin();
+    free(TelaMusicas);
+    clear();
+    return 0;
+}
+
+
+
+void desenhaAlbum(float largura, float altura, struct TelaExec *TelaMusicas, DescPilha *PilhaCorreta){
+    int max_lines = altura * 0.85; // Máximo de linhas visíveis na janela de conteúdo
+    int header_alt, header_larg, cont_alt, cont_larg, foot_alt, foot_larg;
+    NodoLP *aux = PilhaCorreta->Topo;
+    int start_line = 0; // Linha inicial para rolagem
+    int total_musics = 0; // Total de músicas na lista
+    int i = 0, linhas;
+
+    getmaxyx(TelaMusicas->header, header_alt, header_larg);
+    getmaxyx(TelaMusicas->content, cont_alt, cont_larg);
+    getmaxyx(TelaMusicas->footer, foot_alt, foot_larg);
+    //HEADER
+        wattron(TelaMusicas->header, A_BLINK);
+        mvwprintw(TelaMusicas->header, 1, (header_larg-strlen("ARTISTA ENCONTRADO"))/2, "ARTISTA ENCONTRADO");
+        wattroff(TelaMusicas->header, A_BLINK);
+
+    // Calcula o total de músicas
+    while (aux != NULL) {
+        total_musics++;
+        aux = aux->prox;
+    }
+    aux = PilhaCorreta->Topo; // Reset aux to head
+
+    //CONTENT
+    if (total_musics == 0) {
+        mvwprintw(TelaMusicas->content, cont_alt / 3, (cont_larg - strlen("Playlist Vazia")) / 2, "Playlist Vazia");
+    } else {
+        int i = 0;
+        while (aux != NULL && i < start_line + cont_alt - 2) {
+            if (i >= start_line) {
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), 1, "Musica: %s", aux->info->titulo);
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), cont_larg/4, "Artista: %s", aux->info->artista);
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), cont_larg-95, "Letra: %s", aux->info->letra);
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), cont_larg-30, "Codigo: %d", aux->info->codigo);
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), cont_larg-strlen("Execucoes: ")-6, "Execucoes: %d", aux->info->execucoes);
+            }
+            aux = aux->prox;
+            i++;
+        }
+    }
+
+
+    //FOOTER
+        mvwprintw(TelaMusicas->footer, 1, 1, "Press KEY_DOWN/UP para passar conteudo ou F1 para sair");
+        mvwprintw(TelaMusicas->footer, 1, (foot_larg-strlen("Henrique de Lima Bortolomiol"))/2, "Henrique de Lima Bortolomiol");
+
+    // Atualização das janelas
+    wrefresh(TelaMusicas->header);
+    wrefresh(TelaMusicas->content);
+    wrefresh(TelaMusicas->footer);
+
+    MEVENT event;
+    keypad(stdscr, TRUE);
+    while (1) {
+        int ch = getch();
+
+        if (ch == KEY_F(1)) {
+            break; // Sai do loop ao pressionar F1
+        } else if (ch == KEY_UP && start_line > 0) {
+            start_line--;
+        } else if (ch == KEY_DOWN && start_line + max_lines < total_musics) {
+            start_line++;
+        }
+
+        // Limpar a janela de conteúdo antes de redesenhar
+        werase(TelaMusicas->content);
+        box(TelaMusicas->content, 0, 0);
+        // Reimprimir conteúdo atualizado
+        int i = 0;
+        aux = PilhaCorreta->Topo;
+        while (aux != NULL && i < start_line + cont_alt - 2) {
+            if (i >= start_line) {
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), 1, "Musica: %s", aux->info->titulo);
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), cont_larg/4, "Artista: %s", aux->info->artista);
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), cont_larg-95, "Letra: %s", aux->info->letra);
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), cont_larg-30, "Codigo: %d", aux->info->codigo);
+                mvwprintw(TelaMusicas->content, 1 + (i - start_line), cont_larg-strlen("Execucoes: ")-6, "Execucoes: %d", aux->info->execucoes);
+            }
+            aux = aux->prox;
+            i++;
+        }
+
+        // Atualizar a janela após modificar
+        wrefresh(TelaMusicas->content);
+    }
+}
